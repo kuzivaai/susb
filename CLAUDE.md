@@ -5,23 +5,29 @@ Landing page and ecommerce setup for "Single Until Series B" embroidered dad cap
 Pre-order model with 100-unit threshold and 15 June 2026 deadline.
 
 ## Business Model
-- **Pre-order**: Customers pay upfront. If <100 orders by 15 June 2026, full Stripe refund.
-- **Production**: Bulk order placed with UK Etsy supplier once threshold is hit.
-- **Ships**: June 2026 (after pre-order window closes).
-- **NOT print-on-demand**: This is a pre-order → bulk production model.
+- **Direct purchase / dropshipping**: Customer buys → we order from Etsy seller → seller ships direct to customer.
+- **No pre-orders. No thresholds. No kill switch.** Customer pays, cap gets made and shipped.
+- **NOT holding stock.** Each cap is ordered individually from the Etsy seller on purchase.
 
-## Pricing — DO NOT CHANGE WITHOUT USER APPROVAL
-- **Current retail price: £28** (set by the user)
-- **Target margin: 45% minimum**
-- Per-cap cost from Etsy supplier: TBC (user needs to confirm)
-- Do NOT change the price. If margin analysis shows £28 doesn't hit 45%, PRESENT THE DATA and let the user decide.
+## Pricing — VERIFIED, DO NOT CHANGE WITHOUT USER APPROVAL
+- **Retail price: £28** (user confirmed 2026-04-18)
+- **Supplier cost: £12.00** (cap + embroidery from KidsCultureDesign on Etsy)
+- **Supplier shipping: £3.00** (UK standard, included in supplier price of £15 total)
+- **Stripe fee: £0.62** (1.5% + 20p on £28)
+- **Profit per UK sale: £12.38**
+- **Margin: 44.2%**
+- Target margin was 45%. User accepted 44.2% as competitive.
+- Do NOT change the price. Present data and ask if margin analysis is needed.
 
 ## Supplier
-- UK Etsy seller doing custom embroidery on vintage washed caps
+- **KidsCultureDesign** on Etsy (4.9 stars, 4.2k reviews)
+- UK-based, ships direct to customer
+- £12.00 per cap + £3.00 UK delivery = £15.00 total per order
 - 15 cap colours available (see images/cap-colours.jpg)
 - 17 thread colours available (see images/thread-colours.jpg)
-- Nineties Font included; premium fonts cost £15 extra from supplier
+- Font options: Nineties Font (included), Retro Font, Figtree, Bold Italic, Classic, Modern, College, Cute — premium fonts cost £15 extra from supplier (DO NOT offer premium fonts unless pricing is resolved)
 - Caps: 100% washed cotton twill, unstructured 6-panel, brass buckle closure
+- Estimated delivery: ~5 days from order (per Etsy listing: "Get it by 22 Apr" from 17 Apr)
 
 ## Product Details
 - Unisex, one size adjustable
@@ -62,10 +68,10 @@ Pre-order model with 100-unit threshold and 15 June 2026 deadline.
 - Git email must be mkuziva@gmail.com (not mkuziv — typo caused deploy blocks)
 
 ## What's NOT Done Yet
-- Stripe Payment Link not created
-- Custom domain not connected
-- Actual per-cap cost not confirmed with supplier
-- No real product samples ordered
+- Stripe Payment Link not created (need one product: £28, one-off, tangible goods, tax inclusive)
+- Custom domain not connected (singleuntilseriesb.com)
+- No real product samples ordered (only AI mockups so far)
 - X/IG accounts created but no content posted
-- Express shipping option discussed but not finalised
-- T-shirt expansion discussed but parked until cap validates
+- T-shirt expansion discussed but PARKED until cap validates (do not build until 20+ caps sold)
+- International shipping pricing not finalised (Etsy seller charges more for intl — need to check exact rates)
+- Colour selection on Stripe: currently landing page shows 5 colours but Stripe Payment Link doesn't capture colour choice — need to add a note field or create separate links per colour
