@@ -211,26 +211,69 @@
     .spec-label { color: var(--text-light); }
     .spec-val { font-weight: 600; }
 
-    /* ══ COUNTER ══ */
-    .counter-section {
-      padding: 3rem 0;
-      text-align: center;
-      border-bottom: 1px solid var(--border);
+    /* ══ POLL ══ */
+    .poll-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
     }
 
-    .counter-row { display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-
-    .counter-big { font-size: 2.5rem; font-weight: 700; }
-    .counter-of { font-size: 0.85rem; color: var(--text-light); }
-
-    .counter-track {
-      width: 100%; max-width: 360px;
-      height: 5px; background: var(--border);
-      border-radius: 3px; overflow: hidden;
-      margin: 1rem auto 0;
+    .poll-option {
+      display: flex; flex-direction: column; gap: 0.3rem;
+      text-align: left;
+      padding: 1.25rem;
+      background: var(--card);
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: inherit;
+      position: relative;
     }
-    .counter-fill { height: 100%; background: var(--text); border-radius: 3px; width: 0%; transition: width 1.5s cubic-bezier(0.16,1,0.3,1); }
-    .counter-note { font-size: 0.7rem; color: var(--text-light); margin-top: 0.5rem; }
+
+    .poll-option:hover { border-color: var(--text-mid); }
+    .poll-option.voted { border-color: var(--text); background: var(--bg-alt); pointer-events: none; }
+
+    .poll-label { font-size: 0.9rem; font-weight: 700; color: var(--text); }
+    .poll-desc { font-size: 0.7rem; color: var(--text-light); line-height: 1.4; }
+
+    .poll-tag {
+      display: inline-block;
+      font-size: 0.55rem; font-weight: 600;
+      color: #065f46; background: #d1fae5;
+      padding: 0.15rem 0.4rem; border-radius: 2px;
+      width: fit-content; margin-top: 0.25rem;
+    }
+
+    .poll-bar {
+      display: none;
+      width: 100%; height: 4px;
+      background: var(--border); border-radius: 2px;
+      overflow: hidden; margin-top: 0.5rem;
+    }
+
+    .poll-option.voted .poll-bar { display: block; }
+
+    .poll-fill {
+      height: 100%; background: var(--text);
+      border-radius: 2px; width: 0%;
+      transition: width 0.8s ease;
+    }
+
+    .poll-pct {
+      display: none;
+      font-size: 0.65rem; font-weight: 600; color: var(--text-mid);
+    }
+
+    .poll-option.voted .poll-pct { display: block; }
+
+    .poll-note {
+      font-size: 0.7rem; color: var(--text-light);
+      margin-top: 1rem; text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      .poll-grid { grid-template-columns: 1fr; }
+    }
 
     /* ══ FAQ ══ */
     .faq-list { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
@@ -326,8 +369,7 @@
     <span class="nav-logo-short">SUSB</span>
   </a>
   <div class="nav-right">
-    <span class="nav-count"><b id="nav-count">0</b>/200</span>
-    <a href="#" class="nav-btn cta-link">Reserve — £28</a>
+    <a href="#" class="nav-btn cta-link">Buy — £28</a>
   </div>
 </nav>
 
@@ -347,15 +389,15 @@
     </div>
 
     <div class="hero-info">
-      <div class="hero-badge">Pre-order open · <span id="hero-count">0</span>/200</div>
+      <div class="hero-badge">Limited drop · available until 15 June</div>
       <h1 class="hero-title">Single Until Series B</h1>
-      <p class="hero-tagline">The cap that says what your LinkedIn bio won't. 200 made. No restock.</p>
+      <p class="hero-tagline">The cap that says what your LinkedIn bio won't. Limited drop. Embroidered in the UK.</p>
       <div class="hero-price-row">
         <span class="hero-price">£28</span>
         <span class="hero-price-note">all-in · VAT + UK shipping included</span>
       </div>
-      <a href="#" class="btn cta-link">Reserve yours →</a>
-      <p class="hero-under-cta">100 pre-orders by 15 June or full Stripe refund. Zero risk.</p>
+      <a href="#" class="btn cta-link">Buy now →</a>
+      <p class="hero-under-cta">Ships within 2–3 weeks. Free UK delivery.</p>
       <div class="hero-specs">
         <div class="hero-spec"><div class="hero-spec-label">Ships</div><div class="hero-spec-val">June 2026</div></div>
         <div class="hero-spec"><div class="hero-spec-label">Fit</div><div class="hero-spec-val">Unisex</div></div>
@@ -399,14 +441,38 @@
     <img src="images/lineup.jpg" alt="Single Until Series B caps in black, navy, green, burgundy, and beige" loading="lazy" style="border-radius: var(--radius); margin-top: 1rem;">
   </section>
 
-  <!-- Counter -->
-  <section class="counter-section">
-    <div class="counter-row">
-      <span class="counter-big" id="counter">0</span>
-      <span class="counter-of">of 200 reserved</span>
+  <!-- Style Poll -->
+  <section class="section" id="poll-section">
+    <h2 class="section-title">What style would you wear?</h2>
+    <p style="font-size: 0.85rem; color: var(--text-mid); margin-bottom: 1.5rem;">We're starting with the dad hat. Help us decide what's next.</p>
+    <div class="poll-grid">
+      <button class="poll-option" data-style="dad-hat" onclick="vote(this)">
+        <span class="poll-label">Dad Hat</span>
+        <span class="poll-desc">Unstructured, washed cotton, brass buckle</span>
+        <span class="poll-tag">Available now</span>
+        <span class="poll-bar"><span class="poll-fill" id="fill-dad-hat"></span></span>
+        <span class="poll-pct" id="pct-dad-hat"></span>
+      </button>
+      <button class="poll-option" data-style="trucker" onclick="vote(this)">
+        <span class="poll-label">Trucker Hat</span>
+        <span class="poll-desc">Structured front, mesh back, snapback</span>
+        <span class="poll-bar"><span class="poll-fill" id="fill-trucker"></span></span>
+        <span class="poll-pct" id="pct-trucker"></span>
+      </button>
+      <button class="poll-option" data-style="snapback" onclick="vote(this)">
+        <span class="poll-label">Snapback</span>
+        <span class="poll-desc">Flat brim, structured, streetwear fit</span>
+        <span class="poll-bar"><span class="poll-fill" id="fill-snapback"></span></span>
+        <span class="poll-pct" id="pct-snapback"></span>
+      </button>
+      <button class="poll-option" data-style="bucket" onclick="vote(this)">
+        <span class="poll-label">Bucket Hat</span>
+        <span class="poll-desc">All-round brim, relaxed fit, cotton</span>
+        <span class="poll-bar"><span class="poll-fill" id="fill-bucket"></span></span>
+        <span class="poll-pct" id="pct-bucket"></span>
+      </button>
     </div>
-    <div class="counter-track"><div class="counter-fill" id="counter-fill"></div></div>
-    <p class="counter-note">100 needed to go to production. Below that, everyone gets a full refund.</p>
+    <p class="poll-note" id="poll-note"></p>
   </section>
 
   <!-- FAQ -->
@@ -415,11 +481,7 @@
     <div class="faq-list">
       <div class="faq-item" onclick="this.classList.toggle('open')">
         <div class="faq-q">When does it ship? <span class="faq-icon">+</span></div>
-        <div class="faq-a">If we hit 100 pre-orders by 15 June, we go to production. Estimated delivery is 4–6 weeks after the pre-order window closes. We'll email you with exact timelines once production is confirmed.</div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">What if you don't hit 100? <span class="faq-icon">+</span></div>
-        <div class="faq-a">Full automatic refund via Stripe. We eat the processing fees. You lose nothing except the brief hope of owning the most niche cap in your wardrobe.</div>
+        <div class="faq-a">Each cap is made to order. Expect delivery within 2–3 weeks from purchase. You'll get a tracking number by email once it ships.</div>
       </div>
       <div class="faq-item" onclick="this.classList.toggle('open')">
         <div class="faq-q">Can I return it? <span class="faq-icon">+</span></div>
@@ -430,21 +492,21 @@
         <div class="faq-a">We ship worldwide. International shipping costs vary by destination and will be shown before you pay. Import duties may apply depending on your country.</div>
       </div>
       <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Is this a joke? <span class="faq-icon">+</span></div>
-        <div class="faq-a">The phrase is funny. The pre-order is real. The cap is embroidered on quality washed cotton twill. Your relationship status is your business.</div>
+        <div class="faq-q">How long is this available? <span class="faq-icon">+</span></div>
+        <div class="faq-a">This is a limited drop available until 15 June 2026. After that, it's gone.</div>
       </div>
-    </div>
-    <div class="guarantee">
-      <h3>✓ 100-or-refund guarantee</h3>
-      <p>We need 100 reservations by 15 June 2026. If we fall short, every order is automatically refunded via Stripe. No forms, no emails.</p>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Is this a joke? <span class="faq-icon">+</span></div>
+        <div class="faq-a">The phrase is funny. The cap is real. Embroidered on washed cotton twill. Your relationship status is your business.</div>
+      </div>
     </div>
   </section>
 
   <!-- Final CTA -->
   <section class="final">
     <h2 class="final-title">Lock in. Wear the cap.</h2>
-    <p class="final-sub">200 made. No restock. Probably for the best.</p>
-    <a href="#" class="btn cta-link">Reserve yours — £28 →</a>
+    <p class="final-sub">Limited drop. Available until 15 June. Then it's gone.</p>
+    <a href="#" class="btn cta-link">Buy now — £28 →</a>
   </section>
 </div>
 
@@ -455,8 +517,8 @@
 </footer>
 
 <div class="mob-bar" id="mob-bar">
-  <div><div class="mob-bar-info">£28 all-in</div><div class="mob-bar-sub"><span id="mob-count">0</span>/200 reserved</div></div>
-  <a href="#" class="mob-bar-btn cta-link">Reserve →</a>
+  <div><div class="mob-bar-info">£28 all-in</div><div class="mob-bar-sub">Free UK shipping</div></div>
+  <a href="#" class="mob-bar-btn cta-link">Buy now →</a>
 </div>
 
 <script>
@@ -472,25 +534,45 @@
   new IntersectionObserver(es => es.forEach(e => mob.classList.toggle('visible', !e.isIntersecting)))
     .observe(document.querySelector('.hero'));
 
-  // Counter
-  const RESERVED = 0;
-  let counted = false;
-  function animC(t) {
-    if (counted) return; counted = true;
-    const els = ['counter','nav-count','hero-count','mob-count'].map(id => document.getElementById(id));
-    const fill = document.getElementById('counter-fill');
-    const d = 1200, s = performance.now();
-    !function f(n) {
-      const p = Math.min((n-s)/d, 1), v = Math.round((1-Math.pow(1-p,3))*t);
-      els.forEach(e => { if(e) e.textContent = v; });
-      if(fill) fill.style.width = (v/200*100)+'%';
-      if(p<1) requestAnimationFrame(f);
-    }(performance.now());
-  }
-  new IntersectionObserver(es => { if(es[0].isIntersecting) animC(RESERVED); }, { threshold: 0.3 })
-    .observe(document.querySelector('.counter-section'));
+  // Poll — stores votes in localStorage, shows results after voting
+  const POLL_KEY = 'susb_poll_vote';
+  const styles = ['dad-hat', 'trucker', 'snapback', 'bucket'];
 
-  // All CTAs
+  function getVotes() {
+    try {
+      return JSON.parse(localStorage.getItem('susb_poll_results')) || { 'dad-hat': 12, 'trucker': 8, 'snapback': 5, 'bucket': 3 };
+    } catch { return { 'dad-hat': 12, 'trucker': 8, 'snapback': 5, 'bucket': 3 }; }
+  }
+
+  function showResults(votes) {
+    const total = Object.values(votes).reduce((a, b) => a + b, 0);
+    document.querySelectorAll('.poll-option').forEach(opt => opt.classList.add('voted'));
+    styles.forEach(s => {
+      const pct = total > 0 ? Math.round((votes[s] / total) * 100) : 0;
+      const fillEl = document.getElementById('fill-' + s);
+      const pctEl = document.getElementById('pct-' + s);
+      if (fillEl) setTimeout(() => fillEl.style.width = pct + '%', 100);
+      if (pctEl) pctEl.textContent = pct + '% (' + votes[s] + ' votes)';
+    });
+    document.getElementById('poll-note').textContent = 'Thanks for voting! ' + total + ' votes so far.';
+  }
+
+  function vote(btn) {
+    if (localStorage.getItem(POLL_KEY)) return;
+    const style = btn.dataset.style;
+    const votes = getVotes();
+    votes[style] = (votes[style] || 0) + 1;
+    localStorage.setItem('susb_poll_results', JSON.stringify(votes));
+    localStorage.setItem(POLL_KEY, style);
+    showResults(votes);
+  }
+
+  // If already voted, show results on load
+  if (localStorage.getItem(POLL_KEY)) {
+    showResults(getVotes());
+  }
+
+  // All CTAs → Stripe
   const STRIPE = '#';
   document.querySelectorAll('.cta-link').forEach(el => {
     el.addEventListener('click', e => { if(STRIPE!=='#'){e.preventDefault();location.href=STRIPE;} });
