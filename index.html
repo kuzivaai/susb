@@ -3,33 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Single Until Series B &mdash; The Cap for Founders Who Lock In</title>
+  <title>Single Until Series B &mdash; Limited-Run Embroidered Cap</title>
   <meta name="description" content="Limited-run embroidered dad hat for founders, builders, and anyone who chose focus over distractions. 200 made. Unisex. Embroidered in the UK. £28 all-in.">
   <meta name="keywords" content="single until series b, founder cap, startup hat, embroidered dad hat, founder merch, startup culture, lock in, build in public, unisex cap, limited run">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Single Until Series B — The Cap for Founders Who Lock In">
-  <meta property="og:description" content="Limited-run embroidered dad hat. 200 made. For founders, builders, and anyone who chose focus over distractions. £28 all-in.">
+  <meta property="og:title" content="Single Until Series B — Limited-Run Embroidered Cap">
+  <meta property="og:description" content="200 made. Unisex. Embroidered in the UK. £28 all-in. For anyone who chose to lock in.">
   <meta property="og:type" content="product">
   <meta property="og:url" content="https://singleuntilseriesb.com">
   <!-- <meta property="og:image" content="https://singleuntilseriesb.com/og.jpg"> -->
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Single Until Series B">
-  <meta name="twitter:description" content="Limited-run embroidered cap. 200 made. For anyone who chose to lock in. £28.">
-  <!-- <meta name="twitter:image" content="https://singleuntilseriesb.com/og.jpg"> -->
-
-  <!-- Canonical -->
+  <meta name="twitter:description" content="200 embroidered caps. £28. For anyone who chose to lock in.">
   <link rel="canonical" href="https://singleuntilseriesb.com">
 
-  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Single Until Series B Cap",
-    "description": "Limited-run embroidered dad hat for founders and builders. Washed cotton twill, flat embroidery, brass buckle closure. Unisex. Embroidered in the UK.",
+    "description": "Limited-run embroidered dad hat. Washed cotton twill, flat embroidery, brass buckle closure. Unisex. Embroidered in the UK.",
     "brand": { "@type": "Brand", "name": "Single Until Series B" },
     "offers": {
       "@type": "Offer",
@@ -46,859 +38,794 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg-deep: #060606;
-      --bg-card: #0c0c0c;
-      --bg-elevated: #111111;
-      --text-primary: #e8e4de;
-      --text-muted: #6b6560;
-      --text-dim: #3d3833;
-      --accent: #c9a96e;
-      --accent-glow: rgba(201, 169, 110, 0.15);
-      --accent-bright: #dfc08a;
-      --border: rgba(201, 169, 110, 0.12);
-      --border-subtle: rgba(255, 255, 255, 0.04);
-      --font-display: 'Playfair Display', Georgia, serif;
-      --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+      --bg: #0a0a0a;
+      --bg-card: #111;
+      --bg-hover: #161616;
+      --text: #f5f5f0;
+      --text-secondary: #999;
+      --text-dim: #555;
+      --green: #4ade80;
+      --green-dim: rgba(74, 222, 128, 0.1);
+      --green-glow: rgba(74, 222, 128, 0.15);
+      --border: rgba(255,255,255,0.06);
+      --font-body: 'Space Grotesk', -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --max-w: 1080px;
+      --px: clamp(1.25rem, 4vw, 2rem);
     }
 
-    html {
-      font-size: 16px;
-      scroll-behavior: smooth;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
+    html { font-size: 16px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
 
     body {
-      background: var(--bg-deep);
-      color: var(--text-primary);
-      font-family: var(--font-mono);
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
       font-weight: 400;
-      line-height: 1.7;
+      line-height: 1.6;
       overflow-x: hidden;
-      min-height: 100vh;
     }
 
-    /* Grain overlay */
-    body::before {
-      content: '';
+    /* ═══ LAYOUT ═══ */
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--px); }
+    .full-bleed { width: 100%; }
+
+    /* ═══ NAV ═══ */
+    .nav {
       position: fixed;
-      inset: 0;
-      z-index: 9999;
-      pointer-events: none;
-      opacity: 0.035;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-      background-repeat: repeat;
-      background-size: 256px 256px;
-    }
-
-    /* Ambient glow */
-    body::after {
-      content: '';
-      position: fixed;
-      top: -40vh;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80vw;
-      height: 60vh;
-      background: radial-gradient(ellipse, rgba(201, 169, 110, 0.04) 0%, transparent 70%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .page-wrapper { position: relative; z-index: 1; }
-
-    /* ═══ HERO ═══ */
-    .hero {
-      min-height: 100vh;
-      min-height: 100svh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem 1.5rem;
-      text-align: center;
-      position: relative;
-    }
-
-    .hero-eyebrow {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 2.5rem;
-      opacity: 0;
-      animation: fadeUp 0.8s ease-out 0.3s forwards;
-    }
-
-    .hero-headline {
-      font-family: var(--font-display);
-      font-weight: 900;
-      font-size: clamp(3rem, 10vw, 7.5rem);
-      line-height: 0.88;
-      letter-spacing: -0.03em;
-      color: var(--text-primary);
-      margin-bottom: 0.15em;
-      opacity: 0;
-      animation: fadeUp 1s ease-out 0.5s forwards;
-    }
-
-    .hero-headline em {
-      font-style: italic;
-      font-weight: 400;
-      color: var(--accent);
-    }
-
-    .hero-sub {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      font-weight: 400;
-      color: var(--text-muted);
-      margin-top: 2rem;
-      letter-spacing: 0.02em;
-      max-width: 32ch;
-      opacity: 0;
-      animation: fadeUp 0.8s ease-out 0.8s forwards;
-    }
-
-    .hero-cta-wrap {
-      margin-top: 3rem;
-      opacity: 0;
-      animation: fadeUp 0.8s ease-out 1s forwards;
-    }
-
-    .hero-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--bg-deep);
-      background: var(--accent);
-      border: none;
-      padding: 0.9rem 2rem;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .hero-cta:hover {
-      background: var(--accent-bright);
-      transform: translateY(-1px);
-      box-shadow: 0 8px 30px var(--accent-glow);
-    }
-
-    .hero-cta-sub {
-      display: block;
-      font-size: 0.55rem;
-      color: var(--text-dim);
-      margin-top: 0.75rem;
-      letter-spacing: 0.05em;
-    }
-
-    .hero-scroll-hint {
-      position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      opacity: 0;
-      animation: fadeUp 0.8s ease-out 1.4s forwards;
-    }
-
-    .hero-scroll-hint span {
-      font-size: 0.55rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-    }
-
-    .scroll-line {
-      width: 1px;
-      height: 40px;
-      background: linear-gradient(to bottom, var(--accent), transparent);
-      animation: scrollPulse 2s ease-in-out infinite;
-    }
-
-    /* ═══ SECTIONS ═══ */
-    .section {
-      max-width: 620px;
-      margin: 0 auto;
-      padding: 6rem 1.5rem;
-    }
-
-    .section-label {
-      font-family: var(--font-mono);
-      font-size: 0.6rem;
-      font-weight: 600;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-bottom: 2rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .section-label span {
-      color: var(--accent);
-      margin-right: 0.5em;
-    }
-
-    /* ═══ COPY BLOCKS ═══ */
-    .copy-lead {
-      font-family: var(--font-display);
-      font-size: clamp(1.6rem, 4vw, 2.4rem);
-      font-weight: 400;
-      line-height: 1.35;
-      color: var(--text-primary);
-      margin-bottom: 2rem;
-    }
-
-    .copy-lead strong { font-weight: 700; }
-
-    .copy-body {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      line-height: 1.9;
-      margin-bottom: 1.5rem;
-    }
-
-    .copy-accent {
-      font-family: var(--font-display);
-      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-      font-weight: 400;
-      font-style: italic;
-      line-height: 1.45;
-      color: var(--accent);
-      margin: 2.5rem 0;
-      padding-left: 1.25rem;
-      border-left: 2px solid var(--border);
-    }
-
-    /* ═══ REASONS GRID ═══ */
-    .reasons {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1px;
-      background: var(--border-subtle);
-      border: 1px solid var(--border-subtle);
-      margin: 2.5rem 0;
-    }
-
-    .reason {
-      background: var(--bg-card);
-      padding: 1.5rem 1.25rem;
-    }
-
-    .reason-label {
-      font-size: 0.6rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-bottom: 0.4rem;
-    }
-
-    .reason-text {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      line-height: 1.3;
-    }
-
-    /* ═══ PRODUCT DETAILS ═══ */
-    .product-details {
-      display: grid;
-      gap: 1px;
-      background: var(--border-subtle);
-      border: 1px solid var(--border-subtle);
-    }
-
-    .product-detail {
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1rem var(--px);
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
-      padding: 1rem 1.25rem;
-      background: var(--bg-card);
-      font-size: 0.75rem;
+      align-items: center;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
     }
 
-    .product-detail-label {
-      color: var(--text-muted);
+    .nav-logo {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-cta {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      letter-spacing: 0.15em;
-      font-size: 0.6rem;
+      color: var(--bg);
+      background: var(--green);
+      padding: 0.5rem 1.2rem;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: opacity 0.2s;
     }
 
-    .product-detail-value {
-      color: var(--text-primary);
-      text-align: right;
+    .nav-cta:hover { opacity: 0.85; }
+
+    /* ═══ HERO — PRODUCT ABOVE THE FOLD ═══ */
+    .hero {
+      padding-top: 5rem;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
     }
 
-    /* ═══ RESERVE BLOCK ═══ */
-    .reserve-block {
-      padding: 8rem 1.5rem;
-      text-align: center;
+    .hero-image {
+      aspect-ratio: 1;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
       position: relative;
     }
 
-    .reserve-block::before {
+    .hero-image-placeholder {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text-dim);
+      text-align: center;
+      padding: 2rem;
+      line-height: 1.8;
+    }
+
+    .hero-info { display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green);
+      background: var(--green-dim);
+      padding: 0.4rem 0.75rem;
+      border-radius: 2px;
+      width: fit-content;
+    }
+
+    .hero-badge-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .hero-title {
+      font-family: var(--font-body);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-tagline {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      max-width: 36ch;
+      line-height: 1.6;
+    }
+
+    .hero-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    .hero-price {
+      font-family: var(--font-mono);
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .hero-price-note {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+
+    .hero-buy {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--green);
+      border: none;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      text-decoration: none;
+      border-radius: 2px;
+      width: fit-content;
+      transition: all 0.2s ease;
+    }
+
+    .hero-buy:hover { opacity: 0.85; transform: translateY(-1px); }
+
+    .hero-meta {
+      display: flex;
+      gap: 2rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .hero-meta-item { display: flex; flex-direction: column; gap: 0.15rem; }
+
+    .hero-meta-label {
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    .hero-meta-value {
+      font-size: 0.8rem;
+      color: var(--text);
+    }
+
+    /* ═══ COUNTER BAR ═══ */
+    .counter-bar {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 0;
+      margin: 0;
+    }
+
+    .counter-bar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .counter-left {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+    }
+
+    .counter-num {
+      font-family: var(--font-mono);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--green);
+    }
+
+    .counter-of {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+
+    .counter-right { flex: 1; max-width: 400px; }
+
+    .counter-track {
+      width: 100%;
+      height: 4px;
+      background: var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .counter-fill {
+      height: 100%;
+      background: var(--green);
+      border-radius: 2px;
+      width: 0%;
+      transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .counter-text {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      color: var(--text-dim);
+      margin-top: 0.4rem;
+    }
+
+    /* ═══ SECTION ═══ */
+    .section { padding: 5rem 0; }
+    .section + .section { border-top: 1px solid var(--border); }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-number {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--green);
+      letter-spacing: 0.1em;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    /* ═══ THE PITCH — FUNNY COPY ═══ */
+    .pitch { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; max-width: 680px; }
+    .pitch strong { color: var(--text); font-weight: 600; }
+    .pitch + .pitch { margin-top: 1.5rem; }
+
+    /* ═══ SPECS GRID ═══ */
+    .specs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 2.5rem;
+    }
+
+    .spec {
+      background: var(--bg-card);
+      padding: 1.25rem;
+    }
+
+    .spec-label {
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 0.3rem;
+    }
+
+    .spec-value { font-size: 0.85rem; color: var(--text); }
+
+    /* ═══ FAQ ═══ */
+    .faq-list { display: grid; gap: 0; border: 1px solid var(--border); }
+
+    .faq-item {
+      padding: 1.25rem 1.5rem;
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item:hover { background: var(--bg-hover); }
+
+    .faq-q {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-toggle {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      transition: transform 0.2s;
+    }
+
+    .faq-item.open .faq-toggle { transform: rotate(45deg); }
+
+    .faq-a {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-top: 0.75rem;
+      display: none;
+    }
+
+    .faq-item.open .faq-a { display: block; }
+
+    /* ═══ GUARANTEE ═══ */
+    .guarantee-box {
+      border: 1px solid var(--green-dim);
+      background: var(--green-dim);
+      padding: 2rem;
+      border-radius: 2px;
+      margin-top: 3rem;
+    }
+
+    .guarantee-box h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .guarantee-box p {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ═══ FINAL CTA ═══ */
+    .final-cta {
+      text-align: center;
+      padding: 6rem 0;
+      position: relative;
+    }
+
+    .final-cta::before {
       content: '';
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, var(--green-glow), transparent 70%);
       pointer-events: none;
     }
 
-    .counter-display { position: relative; margin-bottom: 1rem; }
-
-    .counter-number {
-      font-family: var(--font-display);
-      font-size: clamp(4rem, 12vw, 8rem);
-      font-weight: 900;
-      line-height: 1;
-      color: var(--text-primary);
-    }
-
-    .counter-slash {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 6vw, 3.5rem);
-      font-weight: 400;
-      font-style: italic;
-      color: var(--text-dim);
-      margin: 0 0.15em;
-    }
-
-    .counter-total {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 6vw, 3.5rem);
-      font-weight: 400;
-      color: var(--text-dim);
-    }
-
-    .counter-label {
-      font-size: 0.6rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-top: 0.75rem;
-    }
-
-    .progress-track {
-      width: 100%;
-      max-width: 300px;
-      height: 2px;
-      background: var(--border-subtle);
-      margin: 1.5rem auto 0;
-      overflow: hidden;
-    }
-
-    .progress-fill {
-      height: 100%;
-      background: var(--accent);
-      width: 0%;
-      transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .reserve-cta-wrap { margin-top: 3rem; }
-
-    .reserve-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--bg-deep);
-      background: var(--accent);
-      border: none;
-      padding: 1.1rem 2.5rem;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .reserve-cta:hover {
-      background: var(--accent-bright);
-      transform: translateY(-1px);
-      box-shadow: 0 8px 30px var(--accent-glow);
-    }
-
-    .reserve-cta:active { transform: translateY(0); }
-
-    .reserve-cta-arrow { transition: transform 0.3s ease; }
-    .reserve-cta:hover .reserve-cta-arrow { transform: translateX(3px); }
-
-    .reserve-price {
-      display: block;
-      font-size: 0.6rem;
-      color: var(--text-muted);
-      margin-top: 1rem;
-      letter-spacing: 0.1em;
-    }
-
-    .reserve-subtext {
-      font-size: 0.65rem;
-      color: var(--text-dim);
-      margin-top: 0.5rem;
-      max-width: 38ch;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
-    }
-
-    /* ═══ GUARANTEE ═══ */
-    .guarantee {
-      max-width: 620px;
-      margin: 0 auto;
-      padding: 0 1.5rem 6rem;
-      text-align: center;
-    }
-
-    .guarantee-box {
-      border: 1px solid var(--border);
-      padding: 2.5rem 2rem;
-      background: var(--bg-card);
-    }
-
-    .guarantee-headline {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
+    .final-headline {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
       font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 1rem;
-    }
-
-    .guarantee-text {
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      line-height: 1.8;
-      max-width: 44ch;
-      margin: 0 auto;
-    }
-
-    /* ═══ DIVIDER ═══ */
-    .divider { max-width: 620px; margin: 0 auto; padding: 0 1.5rem; }
-    .divider-line { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); }
-
-    /* ═══ FAQ ═══ */
-    .faq-item { margin-bottom: 2rem; }
-
-    .faq-q {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      color: var(--text-primary);
+      letter-spacing: -0.02em;
       margin-bottom: 0.5rem;
+      position: relative;
     }
 
-    .faq-a {
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      line-height: 1.8;
+    .final-sub {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      position: relative;
     }
 
     /* ═══ FOOTER ═══ */
     .footer {
-      max-width: 620px;
-      margin: 0 auto;
-      padding: 4rem 1.5rem 3rem;
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 0;
       text-align: center;
     }
 
-    .footer-mark {
-      font-family: var(--font-display);
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--text-dim);
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-    }
-
-    .footer-legal {
-      font-size: 0.55rem;
+    .footer p {
+      font-size: 0.65rem;
       color: var(--text-dim);
       line-height: 1.8;
     }
 
-    .footer-legal a {
-      color: var(--text-muted);
+    .footer a {
+      color: var(--text-secondary);
       text-decoration: none;
-      border-bottom: 1px solid var(--border-subtle);
-      transition: color 0.2s;
+      transition: color 0.15s;
     }
 
-    .footer-legal a:hover { color: var(--accent); }
-
-    /* ═══ STICKY BAR ═══ */
-    .sticky-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      background: rgba(6, 6, 6, 0.92);
-      border-top: 1px solid var(--border-subtle);
-      padding: 0.75rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transform: translateY(100%);
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-    }
-
-    .sticky-bar.visible { transform: translateY(0); }
-
-    .sticky-bar-info { display: flex; flex-direction: column; gap: 0.15rem; }
-
-    .sticky-bar-count { font-size: 0.65rem; font-weight: 600; color: var(--text-primary); }
-    .sticky-bar-price { font-size: 0.55rem; color: var(--text-muted); }
-
-    .sticky-bar-cta {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--bg-deep);
-      background: var(--accent);
-      border: none;
-      padding: 0.7rem 1.5rem;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-
-    .sticky-bar-cta:hover { background: var(--accent-bright); }
+    .footer a:hover { color: var(--green); }
 
     /* ═══ ANIMATIONS ═══ */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes scrollPulse {
-      0%, 100% { opacity: 0.3; transform: scaleY(1); }
-      50% { opacity: 0.7; transform: scaleY(1.2); }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
     }
 
     .reveal {
       opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
 
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* ═══ RESPONSIVE ═══ */
-    @media (min-width: 768px) {
-      .section { padding: 8rem 2rem; }
-      .reserve-block { padding: 10rem 2rem; }
-      .sticky-bar { display: none; }
+    /* ═══ MOBILE ═══ */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-top: 4.5rem;
+        min-height: auto;
+        padding-bottom: 2rem;
+      }
+
+      .hero-image { aspect-ratio: 4/3; }
+
+      .hero-meta { gap: 1.5rem; }
+
+      .hero-buy { width: 100%; }
+
+      .counter-bar-inner { flex-direction: column; align-items: flex-start; gap: 1rem; }
+
+      .counter-right { max-width: 100%; width: 100%; }
+
+      .section { padding: 3rem 0; }
+
+      .nav { padding: 0.75rem var(--px); }
     }
 
-    @media (max-width: 480px) {
-      .reasons { grid-template-columns: 1fr; }
-      .hero { padding: 2rem 1.25rem; }
-      .reserve-cta { width: 100%; justify-content: center; }
+    /* ═══ STICKY MOBILE CTA ═══ */
+    .mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      background: rgba(10,10,10,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border);
+      padding: 0.75rem var(--px);
+      align-items: center;
+      justify-content: space-between;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
     }
 
-    ::selection { background: var(--accent); color: var(--bg-deep); }
+    .mobile-cta.visible { transform: translateY(0); }
 
-    ::-webkit-scrollbar { width: 4px; }
-    ::-webkit-scrollbar-track { background: var(--bg-deep); }
-    ::-webkit-scrollbar-thumb { background: var(--text-dim); }
-    ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+    .mobile-cta-info { font-size: 0.7rem; font-weight: 600; }
+    .mobile-cta-price { font-size: 0.6rem; color: var(--text-dim); }
+
+    .mobile-cta-btn {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--bg);
+      background: var(--green);
+      border: none;
+      padding: 0.65rem 1.25rem;
+      border-radius: 2px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-cta { display: flex; }
+    }
+
+    ::selection { background: var(--green); color: var(--bg); }
   </style>
 </head>
 <body>
 
-<div class="page-wrapper">
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <a href="#top" class="nav-logo">SUSB</a>
+  <a href="#" class="nav-cta" id="nav-buy">Reserve &mdash; &pound;28</a>
+</nav>
 
-  <!-- ═══ HERO ═══ -->
+<div class="container">
+
+  <!-- ═══ HERO: PRODUCT ABOVE THE FOLD ═══ -->
   <section class="hero" id="top">
-    <p class="hero-eyebrow">200 caps &middot; embroidered in the UK</p>
-    <h1 class="hero-headline">
-      Single<br>Until<br><em>Series B.</em>
-    </h1>
-    <p class="hero-sub">For everyone who chose to lock in, stay focused, and build something that matters.</p>
-    <div class="hero-cta-wrap">
-      <a href="#reserve" class="hero-cta">
-        Reserve yours &rarr;
-      </a>
-      <span class="hero-cta-sub">&pound;28 all-in &middot; 200 available</span>
+    <div class="hero-image">
+      <!-- Replace with <img src="cap.jpg" alt="Single Until Series B embroidered cap" width="600" height="600"> -->
+      <div class="hero-image-placeholder">
+        [ product image ]<br>
+        Replace with your cap photo<br>
+        Ideal: 1200&times;1200px square
+      </div>
     </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
+
+    <div class="hero-info">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Pre-order open &middot; <span id="hero-count">0</span>/200
+      </div>
+
+      <h1 class="hero-title">Single Until<br>Series B</h1>
+
+      <p class="hero-tagline">The cap that says what your LinkedIn bio won't. Embroidered in the UK. 200 made. No restock. No regrets (probably).</p>
+
+      <div class="hero-price-row">
+        <span class="hero-price">&pound;28</span>
+        <span class="hero-price-note">all-in &middot; VAT + UK shipping included</span>
+      </div>
+
+      <a href="#" class="hero-buy" id="main-cta">Reserve yours &rarr;</a>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Ships</span>
+          <span class="hero-meta-value">June 2026</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Fit</span>
+          <span class="hero-meta-value">Unisex</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Made</span>
+          <span class="hero-meta-value">UK embroidered</span>
+        </div>
+      </div>
     </div>
   </section>
+</div>
 
-  <!-- ═══ WHY ═══ -->
-  <div class="divider"><div class="divider-line"></div></div>
+<!-- ═══ COUNTER BAR ═══ -->
+<div class="counter-bar">
+  <div class="container">
+    <div class="counter-bar-inner">
+      <div class="counter-left">
+        <span class="counter-num" id="counter">0</span>
+        <span class="counter-of">of 200 reserved</span>
+      </div>
+      <div class="counter-right">
+        <div class="counter-track">
+          <div class="counter-fill" id="counter-fill"></div>
+        </div>
+        <p class="counter-text">Need 100 to go to production. Below that, everyone gets a full refund.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
+<div class="container">
+
+  <!-- ═══ THE PITCH ═══ -->
   <section class="section reveal">
-    <div class="section-label"><span>01</span> Why this cap exists</div>
-    <p class="copy-lead">
-      Somebody called it the worst trend out of Silicon Valley. Somebody else said they <strong>pity</strong> anyone who puts building ahead of dating.
-    </p>
-    <p class="copy-body">
-      But anyone who's actually built something &mdash; a company, a product, a craft, a body of work &mdash; knows the truth. There are seasons where you have to go all in. Not because you hate balance. Because the thing you're building demands everything you've got right now.
-    </p>
-    <p class="copy-accent">
-      Some people lock in for freedom. Some for money. Some because they want to change something. Some because they can't stop building. Whatever your reason &mdash; this cap is yours.
-    </p>
-
-    <div class="reasons">
-      <div class="reason">
-        <div class="reason-label">Freedom</div>
-        <div class="reason-text">Be your own boss</div>
-      </div>
-      <div class="reason">
-        <div class="reason-label">Craft</div>
-        <div class="reason-text">Love building things</div>
-      </div>
-      <div class="reason">
-        <div class="reason-label">Impact</div>
-        <div class="reason-text">Change something real</div>
-      </div>
-      <div class="reason">
-        <div class="reason-label">Escape</div>
-        <div class="reason-text">Leave the 9-to-5 behind</div>
-      </div>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <h2 class="section-title">What's the deal</h2>
     </div>
 
-    <p class="copy-body">
-      This isn't about glorifying hustle culture or pretending sacrifice is fun. It's about wearing what you mean. You chose focus. You chose to build. The cap just says it out loud.
+    <p class="pitch">
+      Someone on the internet said "Single Until Series B" and half of tech Twitter turned it into a personality trait. The other half called it <strong>the worst trend out of Silicon Valley</strong>. An influencer said she pities anyone who'd actually do it.
+    </p>
+    <p class="pitch">
+      We thought: <strong>that's a cap.</strong>
+    </p>
+    <p class="pitch">
+      Not a self-help movement. Not a lifestyle brand. Just a genuinely well-made hat with a phrase that makes founders laugh, VCs nervous, and your mum concerned.
+    </p>
+    <p class="pitch">
+      Whether you're building a startup, freelancing at 2am, grinding a side project, or just chronically unavailable &mdash; if you've ever chosen the work over the WhatsApp reply, this is your uniform.
     </p>
   </section>
 
-  <!-- ═══ THE CAP ═══ -->
-  <div class="divider"><div class="divider-line"></div></div>
-
+  <!-- ═══ SPECS ═══ -->
   <section class="section reveal">
-    <div class="section-label"><span>02</span> The cap</div>
-    <p class="copy-lead">
-      <strong>Heavyweight embroidered dad hat.</strong> Not a Printful generic. Not fast fashion. A proper cap you'll actually want to wear.
-    </p>
-    <div class="product-details">
-      <div class="product-detail">
-        <span class="product-detail-label">Fabric</span>
-        <span class="product-detail-value">100% washed cotton twill</span>
-      </div>
-      <div class="product-detail">
-        <span class="product-detail-label">Decoration</span>
-        <span class="product-detail-value">Flat embroidery, single colour</span>
-      </div>
-      <div class="product-detail">
-        <span class="product-detail-label">Profile</span>
-        <span class="product-detail-value">Unstructured six-panel</span>
-      </div>
-      <div class="product-detail">
-        <span class="product-detail-label">Closure</span>
-        <span class="product-detail-value">Adjustable brass buckle strap</span>
-      </div>
-      <div class="product-detail">
-        <span class="product-detail-label">Fit</span>
-        <span class="product-detail-value">Unisex &mdash; one size adjustable</span>
-      </div>
-      <div class="product-detail">
-        <span class="product-detail-label">Made in</span>
-        <span class="product-detail-value">Embroidered in the UK</span>
-      </div>
-      <div class="product-detail">
-        <span class="product-detail-label">Run</span>
-        <span class="product-detail-value">200 units &mdash; no restock</span>
-      </div>
-      <div class="product-detail">
-        <span class="product-detail-label">Ships</span>
-        <span class="product-detail-value">June 2026</span>
-      </div>
-      <div class="product-detail">
-        <span class="product-detail-label">Price</span>
-        <span class="product-detail-value">&pound;28 all-in (VAT + UK shipping included)</span>
-      </div>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <h2 class="section-title">The actual cap</h2>
     </div>
-  </section>
 
-  <!-- ═══ RESERVE ═══ -->
-  <section class="reserve-block reveal" id="reserve">
-    <div class="counter-display">
-      <span class="counter-number" id="counter">0</span>
-      <span class="counter-slash">/</span>
-      <span class="counter-total">200</span>
+    <p class="pitch">Not a Printful generic. Not a £5 AliExpress hat with iron-on vinyl that peels after one wash. This is a proper cap.</p>
+
+    <div class="specs">
+      <div class="spec">
+        <div class="spec-label">Fabric</div>
+        <div class="spec-value">100% washed cotton twill</div>
+      </div>
+      <div class="spec">
+        <div class="spec-label">Decoration</div>
+        <div class="spec-value">Flat embroidery, single colour</div>
+      </div>
+      <div class="spec">
+        <div class="spec-label">Profile</div>
+        <div class="spec-value">Unstructured six-panel dad hat</div>
+      </div>
+      <div class="spec">
+        <div class="spec-label">Closure</div>
+        <div class="spec-value">Adjustable brass buckle</div>
+      </div>
+      <div class="spec">
+        <div class="spec-label">Fit</div>
+        <div class="spec-value">Unisex &mdash; one size adjustable</div>
+      </div>
+      <div class="spec">
+        <div class="spec-label">Production</div>
+        <div class="spec-value">Embroidered in the UK</div>
+      </div>
+      <div class="spec">
+        <div class="spec-label">Run</div>
+        <div class="spec-value">200 units &mdash; no restock</div>
+      </div>
+      <div class="spec">
+        <div class="spec-label">Price</div>
+        <div class="spec-value">&pound;28 all-in</div>
+      </div>
     </div>
-    <p class="counter-label">Reserved</p>
-    <div class="progress-track">
-      <div class="progress-fill" id="progress-fill"></div>
-    </div>
-    <div class="reserve-cta-wrap">
-      <a href="#" class="reserve-cta" id="cta-btn">
-        Reserve yours
-        <span class="reserve-cta-arrow">&rarr;</span>
-      </a>
-    </div>
-    <span class="reserve-price">&pound;28 &middot; charged in full &middot; refunded if we don't hit 100</span>
-    <p class="reserve-subtext">
-      If fewer than 100 people reserve by 15 June 2026, every penny is refunded automatically via Stripe. No forms, no emails.
-    </p>
   </section>
 
   <!-- ═══ FAQ ═══ -->
-  <div class="divider"><div class="divider-line"></div></div>
-
   <section class="section reveal">
-    <div class="section-label"><span>03</span> Questions</div>
-
-    <div class="faq-item">
-      <p class="faq-q">When does it ship?</p>
-      <p class="faq-a">If we hit 100 pre-orders by 15 June, production starts immediately. Late June for UK, early July for international.</p>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <h2 class="section-title">Questions you probably have</h2>
     </div>
 
-    <div class="faq-item">
-      <p class="faq-q">What if you don't hit 100?</p>
-      <p class="faq-a">Full automatic refund via Stripe. We eat the processing fees. You lose nothing.</p>
+    <div class="faq-list">
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">When does it ship? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">If we hit 100 pre-orders by 15 June, production starts immediately. Late June for UK, early July for international.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">What if you don't hit 100? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Full automatic refund via Stripe. We eat the processing fees. You lose nothing except the brief hope of owning the most niche cap in your wardrobe.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Can I return it? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Yes. 14-day return window from delivery under UK Consumer Contracts Regulations 2013. We cover return postage on quality issues.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">International shipping? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Worldwide. US orders fulfilled from a US partner &mdash; no customs surprises. EU and rest-of-world ships from the UK. Shipping cost shown before you pay.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Is this a joke? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Yes. And also no. The phrase is funny. The cap is genuinely well-made. The pre-order model is real. The embroidery is real. Your relationship status is your business.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Who is this for? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Anyone who's ever chosen the work over the WhatsApp reply. Founders, freelancers, side-project obsessives, solo builders, makers. Any gender. Any industry. No gatekeeping.</div>
+      </div>
     </div>
 
-    <div class="faq-item">
-      <p class="faq-q">Can I return it?</p>
-      <p class="faq-a">Yes. 14-day return window from delivery under UK Consumer Contracts Regulations 2013. We cover return postage on quality issues.</p>
-    </div>
-
-    <div class="faq-item">
-      <p class="faq-q">International shipping?</p>
-      <p class="faq-a">Worldwide. US orders fulfilled from a US partner &mdash; no customs surprises. EU and rest-of-world ships from the UK. Exact shipping cost shown before you pay.</p>
-    </div>
-
-    <div class="faq-item">
-      <p class="faq-q">Who is this for?</p>
-      <p class="faq-a">Anyone who's locked in on something &mdash; a startup, a side project, a creative practice, a career move. Founders, builders, makers, freelancers. No gender, no demographic, no gatekeeping. If you chose focus, it's for you.</p>
-    </div>
-  </section>
-
-  <!-- ═══ GUARANTEE ═══ -->
-  <section class="guarantee reveal">
+    <!-- ═══ GUARANTEE ═══ -->
     <div class="guarantee-box">
-      <p class="guarantee-headline">100-or-refund guarantee</p>
-      <p class="guarantee-text">
-        We need 100 reservations by 15 June 2026 to go to production. If we fall short, Stripe automatically refunds every order. No forms, no emails, no waiting. Your bank sees the reversal within 5&ndash;10 business days.
-      </p>
+      <h3>&#x2713; 100-or-refund guarantee</h3>
+      <p>We need 100 reservations by 15 June 2026. If we fall short, Stripe automatically refunds every order. No forms, no emails, no waiting.</p>
     </div>
   </section>
 
   <!-- ═══ FINAL CTA ═══ -->
-  <section class="reserve-block reveal" style="padding-top: 4rem; padding-bottom: 6rem;">
-    <p class="copy-accent" style="border: none; padding: 0; text-align: center; max-width: 24ch; margin: 0 auto 2.5rem;">
-      Lock in. Build. Wear the cap.
-    </p>
-    <a href="#" class="reserve-cta" onclick="document.getElementById('cta-btn').click(); return false;">
-      Reserve yours &rarr;
-    </a>
+  <section class="final-cta reveal">
+    <h2 class="final-headline">Lock in. Build. Wear the cap.</h2>
+    <p class="final-sub">200 made. When they're gone, they're gone. Probably for the best.</p>
+    <a href="#" class="hero-buy" id="final-buy" style="position: relative;">Reserve yours &mdash; &pound;28 &rarr;</a>
   </section>
 
-  <!-- ═══ FOOTER ═══ -->
-  <footer class="footer">
-    <p class="footer-mark">Single Until Series B</p>
-    <p class="footer-legal">
-      &copy; 2026<br>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="container">
+    <p>
+      &copy; 2026 Single Until Series B<br>
       <a href="mailto:hello@singleuntilseriesb.com">hello@singleuntilseriesb.com</a>
       &middot; <a href="#">Terms</a> &middot; <a href="#">Privacy</a>
     </p>
-  </footer>
-
-</div>
-
-<!-- ═══ STICKY BAR ═══ -->
-<div class="sticky-bar" id="sticky-bar">
-  <div class="sticky-bar-info">
-    <span class="sticky-bar-count"><span id="sticky-count">0</span>/200 reserved</span>
-    <span class="sticky-bar-price">&pound;28 all-in</span>
   </div>
-  <a href="#reserve" class="sticky-bar-cta">Reserve &rarr;</a>
+</footer>
+
+<!-- ═══ MOBILE STICKY CTA ═══ -->
+<div class="mobile-cta" id="mobile-cta">
+  <div>
+    <div class="mobile-cta-info"><span id="mobile-count">0</span>/200 reserved</div>
+    <div class="mobile-cta-price">&pound;28 all-in</div>
+  </div>
+  <a href="#" class="mobile-cta-btn" id="mobile-buy">Reserve &rarr;</a>
 </div>
 
 <script>
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  reveals.forEach(el => revealObserver.observe(el));
+  // Reveal on scroll
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // Sticky bar
-  const stickyBar = document.getElementById('sticky-bar');
-  const hero = document.querySelector('.hero');
-  const stickyObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) stickyBar.classList.add('visible');
-      else stickyBar.classList.remove('visible');
-    });
-  }, { threshold: 0 });
-  stickyObserver.observe(hero);
+  // Mobile sticky CTA
+  const mobileCta = document.getElementById('mobile-cta');
+  const heroEl = document.querySelector('.hero');
+  new IntersectionObserver(entries => {
+    entries.forEach(e => mobileCta.classList.toggle('visible', !e.isIntersecting));
+  }).observe(heroEl);
 
   // Counter
-  const RESERVED_COUNT = 0; // ← Replace with Stripe API or static count
+  const RESERVED = 0; // ← Update from Stripe
 
-  function animateCounter(target) {
-    const counterEl = document.getElementById('counter');
-    const stickyCountEl = document.getElementById('sticky-count');
-    const progressFill = document.getElementById('progress-fill');
-    const duration = 1500;
-    const start = performance.now();
-
-    function update(now) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const current = Math.round(eased * target);
-      counterEl.textContent = current;
-      stickyCountEl.textContent = current;
-      progressFill.style.width = ((current / 200) * 100) + '%';
-      if (progress < 1) requestAnimationFrame(update);
-    }
-    requestAnimationFrame(update);
+  function animateCount(target) {
+    const els = [document.getElementById('counter'), document.getElementById('hero-count'), document.getElementById('mobile-count')];
+    const fill = document.getElementById('counter-fill');
+    const dur = 1200, start = performance.now();
+    (function tick(now) {
+      const p = Math.min((now - start) / dur, 1);
+      const v = Math.round((1 - Math.pow(1 - p, 3)) * target);
+      els.forEach(el => { if (el) el.textContent = v; });
+      if (fill) fill.style.width = ((v / 200) * 100) + '%';
+      if (p < 1) requestAnimationFrame(tick);
+    })(performance.now());
   }
 
-  const reserveBlock = document.getElementById('reserve');
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateCounter(RESERVED_COUNT);
-        counterObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
-  counterObserver.observe(reserveBlock);
+  new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) { animateCount(RESERVED); }
+  }, { threshold: 0.3 }).observe(document.querySelector('.counter-bar'));
 
-  // CTA → Stripe Payment Link
-  document.getElementById('cta-btn').addEventListener('click', (e) => {
-    // e.preventDefault();
-    // window.location.href = 'https://buy.stripe.com/YOUR_LINK_HERE';
+  // CTA clicks → Stripe
+  const STRIPE_URL = '#'; // ← Replace with your Stripe Payment Link
+  document.querySelectorAll('#main-cta, #nav-buy, #final-buy, #mobile-buy').forEach(el => {
+    el.addEventListener('click', (e) => {
+      if (STRIPE_URL !== '#') { e.preventDefault(); window.location.href = STRIPE_URL; }
+    });
   });
 </script>
 
