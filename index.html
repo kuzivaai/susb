@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Single Until Series B — Limited-Run Embroidered Cap</title>
-  <meta name="description" content="Limited-run embroidered dad hat. 200 made. Unisex. Embroidered in the UK. £28 all-in. For anyone who chose to lock in.">
+  <meta name="description" content="Limited-run embroidered dad hat. 200 made. Unisex. Embroidered in the UK. £30 all-in. For anyone who chose to lock in.">
   <meta name="keywords" content="single until series b, founder cap, startup hat, embroidered dad hat, startup merch, unisex cap, limited edition">
   <meta property="og:title" content="Single Until Series B — Limited-Run Embroidered Cap">
-  <meta property="og:description" content="200 made. Unisex. Embroidered in the UK. £28. For anyone who chose to lock in.">
+  <meta property="og:description" content="200 made. Unisex. Embroidered in the UK. £30. For anyone who chose to lock in.">
   <meta property="og:type" content="product">
   <meta property="og:image" content="https://singleuntilseriesb.com/images/flatlay.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Single Until Series B">
-  <meta name="twitter:description" content="200 embroidered caps. £28. For anyone locked in.">
+  <meta name="twitter:description" content="200 embroidered caps. £30. For anyone locked in.">
   <meta name="twitter:image" content="https://singleuntilseriesb.com/images/flatlay.jpg">
   <link rel="canonical" href="https://singleuntilseriesb.com">
   <script type="application/ld+json">
@@ -167,6 +167,31 @@
     .hero-spec:last-child { border-right: none; }
     .hero-spec-label { font-size: 0.55rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); }
     .hero-spec-val { font-size: 0.8rem; font-weight: 600; margin-top: 0.1rem; }
+
+    /* ══ OPTIONS ══ */
+    .option-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .option-label { font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-mid); }
+
+    .colour-picks { display: flex; gap: 0.5rem; }
+    .colour-swatch {
+      width: 32px; height: 32px; border-radius: 50%; border: 2px solid transparent;
+      cursor: pointer; transition: all 0.15s; outline: none;
+    }
+    .colour-swatch:hover { transform: scale(1.1); }
+    .colour-swatch.active { border-color: var(--text); box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--text); }
+    .colour-name { font-size: 0.75rem; color: var(--text-mid); }
+
+    .shipping-options { display: flex; gap: 0.5rem; }
+    .ship-opt {
+      flex: 1; display: flex; flex-direction: column; gap: 0.15rem;
+      padding: 0.75rem 1rem; border: 1.5px solid var(--border);
+      border-radius: var(--radius); cursor: pointer; transition: all 0.15s;
+    }
+    .ship-opt:hover { border-color: var(--text-mid); }
+    .ship-opt.active { border-color: var(--text); background: var(--bg-alt); }
+    .ship-opt input { display: none; }
+    .ship-opt-title { font-size: 0.8rem; font-weight: 600; }
+    .ship-opt-desc { font-size: 0.65rem; color: var(--text-light); }
 
     /* ══ FULL-WIDTH IMAGE BREAK ══ */
     .img-break {
@@ -369,7 +394,7 @@
     <span class="nav-logo-short">SUSB</span>
   </a>
   <div class="nav-right">
-    <a href="#" class="nav-btn cta-link">Buy — £28</a>
+    <a href="#" class="nav-btn cta-link">Buy — £30</a>
   </div>
 </nav>
 
@@ -392,12 +417,43 @@
       <div class="hero-badge">Limited drop · available until 15 June</div>
       <h1 class="hero-title">Single Until Series B</h1>
       <p class="hero-tagline">The cap that says what your LinkedIn bio won't. Limited drop. Embroidered in the UK.</p>
+
+      <!-- Colour selector -->
+      <div class="option-group">
+        <label class="option-label">Cap colour</label>
+        <div class="colour-picks">
+          <button class="colour-swatch active" data-colour="Black" style="background:#2a2a2a" title="Black" onclick="pickColour(this)"></button>
+          <button class="colour-swatch" data-colour="Navy Blue" style="background:#3b5172" title="Navy Blue" onclick="pickColour(this)"></button>
+          <button class="colour-swatch" data-colour="Stone" style="background:#c8b99a" title="Stone" onclick="pickColour(this)"></button>
+          <button class="colour-swatch" data-colour="Burgundy" style="background:#7a3b4a" title="Burgundy" onclick="pickColour(this)"></button>
+          <button class="colour-swatch" data-colour="Vintage Green" style="background:#4a6b5a" title="Vintage Green" onclick="pickColour(this)"></button>
+        </div>
+        <span class="colour-name" id="colour-name">Black</span>
+      </div>
+
+      <!-- Shipping option -->
+      <div class="option-group">
+        <label class="option-label">Shipping</label>
+        <div class="shipping-options">
+          <label class="ship-opt active" onclick="pickShipping(this, 30)">
+            <input type="radio" name="shipping" checked>
+            <span class="ship-opt-title">Standard — Free</span>
+            <span class="ship-opt-desc">2–3 weeks</span>
+          </label>
+          <label class="ship-opt" onclick="pickShipping(this, 35)">
+            <input type="radio" name="shipping">
+            <span class="ship-opt-title">Express — +£5</span>
+            <span class="ship-opt-desc">5–7 days</span>
+          </label>
+        </div>
+      </div>
+
       <div class="hero-price-row">
-        <span class="hero-price">£28</span>
+        <span class="hero-price" id="total-price">£30</span><!-- dynamic -->
         <span class="hero-price-note">all-in · VAT + UK shipping included</span>
       </div>
-      <a href="#" class="btn cta-link">Buy now →</a>
-      <p class="hero-under-cta">Ships within 2–3 weeks. Free UK delivery.</p>
+      <a href="#" class="btn cta-link" id="main-cta">Buy now →</a>
+      <p class="hero-under-cta">Made to order. International shipping calculated at checkout.</p>
       <div class="hero-specs">
         <div class="hero-spec"><div class="hero-spec-label">Ships</div><div class="hero-spec-val">June 2026</div></div>
         <div class="hero-spec"><div class="hero-spec-label">Fit</div><div class="hero-spec-val">Unisex</div></div>
@@ -439,6 +495,14 @@
   <section class="section" style="text-align: center;">
     <h2 class="section-title">Five colours. One message.</h2>
     <img src="images/lineup.jpg" alt="Single Until Series B caps in black, navy, green, burgundy, and beige" loading="lazy" style="border-radius: var(--radius); margin-top: 1rem;">
+    <details style="margin-top: 1.5rem; text-align: left;">
+      <summary style="font-size: 0.8rem; font-weight: 600; cursor: pointer; color: var(--text-mid);">See all available cap colours &amp; thread colours</summary>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+        <img src="images/cap-colours.jpg" alt="Full vintage cap colour chart — 15 colours available" loading="lazy" style="border-radius: var(--radius); border: 1px solid var(--border);">
+        <img src="images/thread-colours.jpg" alt="Thread colour options for embroidery" loading="lazy" style="border-radius: var(--radius); border: 1px solid var(--border);">
+      </div>
+      <p style="font-size: 0.7rem; color: var(--text-light); margin-top: 0.75rem;">Want a colour not listed above? Email us at hello@singleuntilseriesb.com and we'll sort it.</p>
+    </details>
   </section>
 
   <!-- Style Poll -->
@@ -506,7 +570,7 @@
   <section class="final">
     <h2 class="final-title">Lock in. Wear the cap.</h2>
     <p class="final-sub">Limited drop. Available until 15 June. Then it's gone.</p>
-    <a href="#" class="btn cta-link">Buy now — £28 →</a>
+    <a href="#" class="btn cta-link">Buy now — £30 →</a>
   </section>
 </div>
 
@@ -517,7 +581,7 @@
 </footer>
 
 <div class="mob-bar" id="mob-bar">
-  <div><div class="mob-bar-info">£28 all-in</div><div class="mob-bar-sub">Free UK shipping</div></div>
+  <div><div class="mob-bar-info">£30 all-in</div><div class="mob-bar-sub">Free UK shipping</div></div>
   <a href="#" class="mob-bar-btn cta-link">Buy now →</a>
 </div>
 
@@ -572,10 +636,31 @@
     showResults(getVotes());
   }
 
+  // Colour picker
+  function pickColour(btn) {
+    document.querySelectorAll('.colour-swatch').forEach(s => s.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('colour-name').textContent = btn.dataset.colour;
+  }
+
+  // Shipping picker
+  let currentPrice = 30;
+  function pickShipping(label, price) {
+    document.querySelectorAll('.ship-opt').forEach(s => s.classList.remove('active'));
+    label.classList.add('active');
+    currentPrice = price;
+    document.getElementById('total-price').textContent = '£' + price;
+  }
+
   // All CTAs → Stripe
-  const STRIPE = '#';
+  // Create separate Stripe Payment Links for £30 (standard) and £35 (express)
+  const STRIPE_STANDARD = '#';
+  const STRIPE_EXPRESS = '#';
   document.querySelectorAll('.cta-link').forEach(el => {
-    el.addEventListener('click', e => { if(STRIPE!=='#'){e.preventDefault();location.href=STRIPE;} });
+    el.addEventListener('click', e => {
+      const url = currentPrice > 30 ? STRIPE_EXPRESS : STRIPE_STANDARD;
+      if (url !== '#') { e.preventDefault(); location.href = url; }
+    });
   });
 </script>
 
