@@ -394,7 +394,7 @@
     <span class="nav-logo-short">SUSB</span>
   </a>
   <div class="nav-right">
-    <a href="#" class="nav-btn cta-link">Buy — £30</a>
+    <a href="#" class="nav-btn cta-link">Reserve — £28</a>
   </div>
 </nav>
 
@@ -414,9 +414,9 @@
     </div>
 
     <div class="hero-info">
-      <div class="hero-badge">Limited drop · available until 15 June</div>
+      <div class="hero-badge">Pre-order open · ends 15 June</div>
       <h1 class="hero-title">Single Until Series B</h1>
-      <p class="hero-tagline">The cap that says what your LinkedIn bio won't. Limited drop. Embroidered in the UK.</p>
+      <p class="hero-tagline">The cap that says what your LinkedIn bio won't. Embroidered in the UK. Limited run.</p>
 
       <!-- Colour selector -->
       <div class="option-group">
@@ -431,29 +431,12 @@
         <span class="colour-name" id="colour-name">Black</span>
       </div>
 
-      <!-- Shipping option -->
-      <div class="option-group">
-        <label class="option-label">Shipping</label>
-        <div class="shipping-options">
-          <label class="ship-opt active" onclick="pickShipping(this, 30)">
-            <input type="radio" name="shipping" checked>
-            <span class="ship-opt-title">Standard — Free</span>
-            <span class="ship-opt-desc">2–3 weeks</span>
-          </label>
-          <label class="ship-opt" onclick="pickShipping(this, 35)">
-            <input type="radio" name="shipping">
-            <span class="ship-opt-title">Express — +£5</span>
-            <span class="ship-opt-desc">5–7 days</span>
-          </label>
-        </div>
-      </div>
-
       <div class="hero-price-row">
-        <span class="hero-price" id="total-price">£30</span><!-- dynamic -->
+        <span class="hero-price">£28</span>
         <span class="hero-price-note">all-in · VAT + UK shipping included</span>
       </div>
-      <a href="#" class="btn cta-link" id="main-cta">Buy now →</a>
-      <p class="hero-under-cta">Made to order. International shipping calculated at checkout.</p>
+      <a href="#" class="btn cta-link">Reserve yours →</a>
+      <p class="hero-under-cta">100 pre-orders by 15 June or full Stripe refund. Zero risk.</p>
       <div class="hero-specs">
         <div class="hero-spec"><div class="hero-spec-label">Ships</div><div class="hero-spec-val">June 2026</div></div>
         <div class="hero-spec"><div class="hero-spec-label">Fit</div><div class="hero-spec-val">Unisex</div></div>
@@ -545,7 +528,7 @@
     <div class="faq-list">
       <div class="faq-item" onclick="this.classList.toggle('open')">
         <div class="faq-q">When does it ship? <span class="faq-icon">+</span></div>
-        <div class="faq-a">Each cap is made to order. Expect delivery within 2–3 weeks from purchase. You'll get a tracking number by email once it ships.</div>
+        <div class="faq-a">If we hit 100 pre-orders by 15 June, we go to production. Estimated delivery 4–6 weeks after the pre-order window closes. We'll email exact timelines once production is confirmed.</div>
       </div>
       <div class="faq-item" onclick="this.classList.toggle('open')">
         <div class="faq-q">Can I return it? <span class="faq-icon">+</span></div>
@@ -556,21 +539,25 @@
         <div class="faq-a">We ship worldwide. International shipping costs vary by destination and will be shown before you pay. Import duties may apply depending on your country.</div>
       </div>
       <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">How long is this available? <span class="faq-icon">+</span></div>
-        <div class="faq-a">This is a limited drop available until 15 June 2026. After that, it's gone.</div>
+        <div class="faq-q">What if you don't hit 100? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Full automatic refund via Stripe. We eat the processing fees. You lose nothing.</div>
       </div>
       <div class="faq-item" onclick="this.classList.toggle('open')">
         <div class="faq-q">Is this a joke? <span class="faq-icon">+</span></div>
         <div class="faq-a">The phrase is funny. The cap is real. Embroidered on washed cotton twill. Your relationship status is your business.</div>
       </div>
     </div>
+    <div class="guarantee">
+      <h3>✓ 100-or-refund guarantee</h3>
+      <p>We need 100 reservations by 15 June 2026. If we fall short, every order is automatically refunded via Stripe. No forms, no emails.</p>
+    </div>
   </section>
 
   <!-- Final CTA -->
   <section class="final">
     <h2 class="final-title">Lock in. Wear the cap.</h2>
-    <p class="final-sub">Limited drop. Available until 15 June. Then it's gone.</p>
-    <a href="#" class="btn cta-link">Buy now — £30 →</a>
+    <p class="final-sub">Pre-order open until 15 June. 100 orders or full refund.</p>
+    <a href="#" class="btn cta-link">Reserve yours — £28 →</a>
   </section>
 </div>
 
@@ -581,8 +568,8 @@
 </footer>
 
 <div class="mob-bar" id="mob-bar">
-  <div><div class="mob-bar-info">£30 all-in</div><div class="mob-bar-sub">Free UK shipping</div></div>
-  <a href="#" class="mob-bar-btn cta-link">Buy now →</a>
+  <div><div class="mob-bar-info">£28 all-in</div><div class="mob-bar-sub">Pre-order · ships June 2026</div></div>
+  <a href="#" class="mob-bar-btn cta-link">Reserve →</a>
 </div>
 
 <script>
@@ -643,23 +630,11 @@
     document.getElementById('colour-name').textContent = btn.dataset.colour;
   }
 
-  // Shipping picker
-  let currentPrice = 30;
-  function pickShipping(label, price) {
-    document.querySelectorAll('.ship-opt').forEach(s => s.classList.remove('active'));
-    label.classList.add('active');
-    currentPrice = price;
-    document.getElementById('total-price').textContent = '£' + price;
-  }
-
   // All CTAs → Stripe
-  // Create separate Stripe Payment Links for £30 (standard) and £35 (express)
-  const STRIPE_STANDARD = '#';
-  const STRIPE_EXPRESS = '#';
+  const STRIPE = '#'; // ← Replace with your Stripe Payment Link
   document.querySelectorAll('.cta-link').forEach(el => {
     el.addEventListener('click', e => {
-      const url = currentPrice > 30 ? STRIPE_EXPRESS : STRIPE_STANDARD;
-      if (url !== '#') { e.preventDefault(); location.href = url; }
+      if (STRIPE !== '#') { e.preventDefault(); location.href = STRIPE; }
     });
   });
 </script>
