@@ -11,12 +11,14 @@ Pre-order model with 100-unit threshold and 15 June 2026 deadline.
 
 ## Pricing — VERIFIED, DO NOT CHANGE WITHOUT USER APPROVAL
 - **Retail price: £28** (user confirmed 2026-04-18)
-- **Supplier cost: £12.00** (cap + embroidery from KidsCultureDesign on Etsy)
-- **Supplier shipping: £3.00** (UK standard, included in supplier price of £15 total)
-- **Stripe fee: £0.62** (1.5% + 20p on £28)
-- **Profit per UK sale: £12.38**
-- **Margin: 44.2%**
-- Target margin was 45%. User accepted 44.2% as competitive.
+- **UK cost: £15.00** (£12.00 cap + £3.00 UK shipping from KidsCultureDesign on Etsy)
+- **US cost: £24.00** (£16.00 cap + £8.00 intl shipping from same seller)
+- **Stripe UK fee: £0.62** (1.5% + 20p on £28)
+- **Stripe intl fee: ~£1.11-1.50** (3.25% + 20p, varies with total)
+- **UK profit: £12.38 per sale (44.2% margin)**
+- **US profit if charging £8 shipping: £10.63 per sale (29.5% margin)**
+- UK shipping included in £28. International shipping charged separately at checkout.
+- Target margin was 45%. User accepted 44.2% UK margin as competitive.
 - Do NOT change the price. Present data and ask if margin analysis is needed.
 
 ## Supplier
