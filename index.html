@@ -400,8 +400,13 @@
     /* ══ ANIMATIONS ══ */
 
     /* Staggered fade-in on scroll */
+    /* Content always visible by default — JS adds .will-animate to enable transitions */
     .fade-in-section {
-      opacity: 0;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-in-section.will-animate {
+      opacity: 0.15;
       transform: translateY(16px);
       transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
                   transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
@@ -545,15 +550,11 @@
     /* ══ REDUCED MOTION ══ */
     @media (prefers-reduced-motion: reduce) {
       .scroll-progress { display: none; }
-      .fade-in-section {
+      .fade-in-section,
+      .fade-in-section.will-animate {
         opacity: 1;
         transform: none;
         transition: none;
-      }
-      .fade-in-section.is-visible .spec-row,
-      .fade-in-section.is-visible .faq-item,
-      .fade-in-section.is-visible .poll-option {
-        animation: none;
       }
       .hero-thumb:hover { transform: none; box-shadow: none; }
       .hero-img-main img { transition: none; }
@@ -784,7 +785,12 @@
     .observe(document.querySelector('.hero'));
 
   // ══ Fade-in on scroll (IntersectionObserver) ══
+  // Content is visible by default (opacity: 1 in CSS)
+  // JS adds .will-animate to enable animation — if JS fails, content stays visible
   if (!prefersReducedMotion) {
+    const fadeEls = document.querySelectorAll('.fade-in-section');
+    fadeEls.forEach(el => el.classList.add('will-animate'));
+
     const fadeObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -794,9 +800,7 @@
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.fade-in-section').forEach(el => fadeObserver.observe(el));
-  } else {
-    document.querySelectorAll('.fade-in-section').forEach(el => el.classList.add('is-visible'));
+    fadeEls.forEach(el => fadeObserver.observe(el));
   }
 
   // ══ CTA button pulse ══
