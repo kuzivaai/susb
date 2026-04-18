@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Single Until Series B — Limited-Run Embroidered Cap</title>
-  <meta name="description" content="Limited-run embroidered dad hat. 200 made. Unisex. Embroidered in the UK. £30 all-in. For anyone who chose to lock in.">
+  <title>single until series b — Embroidered Cap · £28</title>
+  <meta name="description" content="single until series b. Embroidered dad hat. Washed cotton twill, flat embroidery, brass buckle. Unisex. Made in the UK. £28 all-in. Buy now.">
   <meta name="keywords" content="single until series b, founder cap, startup hat, embroidered dad hat, startup merch, unisex cap, limited edition">
-  <meta property="og:title" content="Single Until Series B — Limited-Run Embroidered Cap">
-  <meta property="og:description" content="200 made. Unisex. Embroidered in the UK. £30. For anyone who chose to lock in.">
+  <meta property="og:title" content="single until series b — Embroidered Cap · £28">
+  <meta property="og:description" content="single until series b. Embroidered dad hat. Unisex. Made in the UK. £28 all-in. Buy now.">
   <meta property="og:type" content="product">
   <meta property="og:image" content="https://singleuntilseriesb.com/images/flatlay.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Single Until Series B">
-  <meta name="twitter:description" content="200 embroidered caps. £30. For anyone locked in.">
+  <meta name="twitter:title" content="single until series b">
+  <meta name="twitter:description" content="Embroidered dad hat. Unisex. Made in the UK. £28 all-in. Buy now.">
   <meta name="twitter:image" content="https://singleuntilseriesb.com/images/flatlay.jpg">
   <link rel="canonical" href="https://singleuntilseriesb.com">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Product","name":"Single Until Series B Cap","description":"Limited-run embroidered dad hat. Washed cotton twill, flat embroidery, brass buckle. Unisex. UK embroidered.","image":"https://singleuntilseriesb.com/images/hero.jpg","brand":{"@type":"Brand","name":"Single Until Series B"},"offers":{"@type":"Offer","price":"28.00","priceCurrency":"GBP","availability":"https://schema.org/PreOrder","url":"https://singleuntilseriesb.com","priceValidUntil":"2026-06-15"},"material":"100% washed cotton twill","audience":{"@type":"PeopleAudience","suggestedGender":"unisex"}}
+  {"@context":"https://schema.org","@type":"Product","name":"single until series b cap","description":"single until series b. Embroidered dad hat. Washed cotton twill, flat embroidery, brass buckle. Unisex. Made in the UK. £28 all-in.","image":"https://singleuntilseriesb.com/images/hero.jpg","brand":{"@type":"Brand","name":"single until series b"},"offers":{"@type":"Offer","price":"28.00","priceCurrency":"GBP","availability":"https://schema.org/InStock","url":"https://singleuntilseriesb.com","priceValidUntil":"2026-06-15"},"material":"100% washed cotton twill","audience":{"@type":"PeopleAudience","suggestedGender":"unisex"}}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -384,13 +384,105 @@
     }
 
     ::selection { background: var(--cta-bg); color: var(--cta-text); }
+
+    /* ══ ANIMATIONS ══ */
+
+    /* Fade-in on scroll — visible at 0.4 opacity minimum on first paint */
+    .fade-in-section {
+      opacity: 0.4;
+      transition: opacity 0.6s ease;
+    }
+    .fade-in-section.is-visible {
+      opacity: 1;
+    }
+
+    /* Thumbnail hover lift */
+    .hero-thumb:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Image crossfade — main image container */
+    .hero-img-main {
+      position: relative;
+    }
+    .hero-img-main img {
+      transition: opacity 0.3s ease;
+    }
+    .hero-img-main img.swapping {
+      opacity: 0;
+    }
+
+    /* Colour swatch bounce on click */
+    @keyframes swatch-bounce {
+      0%   { transform: scale(1); }
+      40%  { transform: scale(1.25); }
+      70%  { transform: scale(0.95); }
+      100% { transform: scale(1); }
+    }
+    .colour-swatch.bounce {
+      animation: swatch-bounce 0.35s ease;
+    }
+
+    /* CTA button pulse/glow */
+    @keyframes cta-pulse {
+      0%   { box-shadow: 0 0 0 0 rgba(26, 26, 26, 0.25); }
+      70%  { box-shadow: 0 0 0 8px rgba(26, 26, 26, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(26, 26, 26, 0); }
+    }
+    .btn.cta-pulse {
+      animation: cta-pulse 2.5s ease-in-out infinite;
+    }
+
+    /* Poll result bar smooth fill */
+    .poll-fill {
+      transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* Parallax on lifestyle image */
+    .img-break {
+      overflow: hidden;
+    }
+    .img-break img {
+      transform: translateY(-5%);
+      transition: transform 0.1s linear;
+      will-change: transform;
+      height: 120%;
+      max-height: none;
+    }
+
+    /* ══ REDUCED MOTION ══ */
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in-section {
+        opacity: 1;
+        transition: none;
+      }
+      .hero-thumb:hover {
+        transform: none;
+      }
+      .hero-img-main img {
+        transition: none;
+      }
+      .colour-swatch.bounce {
+        animation: none;
+      }
+      .btn.cta-pulse {
+        animation: none;
+      }
+      .poll-fill {
+        transition: none;
+      }
+      .img-break img {
+        transform: none;
+        height: auto;
+      }
+    }
   </style>
 </head>
 <body>
 
 <nav class="nav">
   <a href="#" class="nav-logo">
-    <span class="nav-logo-full">Single Until Series B</span>
+    <span class="nav-logo-full">single until series b</span>
     <span class="nav-logo-short">SUSB</span>
   </a>
   <div class="nav-right">
@@ -402,7 +494,7 @@
   <section class="hero">
     <div class="hero-gallery">
       <div class="hero-img-main">
-        <img id="main-img" src="images/hero.jpg" alt="Single Until Series B embroidered dad hat in beige, hand-held showing front embroidery" width="1200" height="900">
+        <img id="main-img" src="images/hero.jpg" alt="single until series b embroidered dad hat in beige, hand-held showing front embroidery" width="1200" height="900">
       </div>
       <div class="hero-thumbs">
         <div class="hero-thumb active" onclick="swapImg(this, 'images/hero.jpg')"><img src="images/hero.jpg" alt="Front view" loading="lazy"></div>
@@ -448,15 +540,15 @@
 
 <!-- Full-width lifestyle image -->
 <div class="img-break">
-  <img src="images/lifestyle.jpg" alt="Person wearing Single Until Series B cap in a coworking space" loading="lazy">
+  <img src="images/lifestyle.jpg" alt="Person wearing single until series b cap in a coworking space" loading="lazy">
 </div>
 
 <div class="wrap">
   <!-- The cap details -->
-  <section class="section">
+  <section class="section fade-in-section">
     <div class="details-grid">
       <div class="details-img">
-        <img src="images/detail.jpg" alt="Close-up of Single Until Series B embroidery on navy cap" loading="lazy" style="border-radius: var(--radius);">
+        <img src="images/detail.jpg" alt="Close-up of single until series b embroidery on navy cap" loading="lazy" style="border-radius: var(--radius);">
       </div>
       <div class="details-text">
         <h2 class="section-title">Not a Printful generic.</h2>
@@ -475,9 +567,9 @@
   </section>
 
   <!-- Colour lineup -->
-  <section class="section" style="text-align: center;">
+  <section class="section fade-in-section" style="text-align: center;">
     <h2 class="section-title">Five colours. One message.</h2>
-    <img src="images/lineup.jpg" alt="Single Until Series B caps in black, navy, green, burgundy, and beige" loading="lazy" style="border-radius: var(--radius); margin-top: 1rem;">
+    <img src="images/lineup.jpg" alt="single until series b caps in black, navy, green, burgundy, and beige" loading="lazy" style="border-radius: var(--radius); margin-top: 1rem;">
     <details style="margin-top: 1.5rem; text-align: left;">
       <summary style="font-size: 0.8rem; font-weight: 600; cursor: pointer; color: var(--text-mid);">See all available cap colours &amp; thread colours</summary>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
@@ -489,7 +581,7 @@
   </section>
 
   <!-- Style Poll -->
-  <section class="section" id="poll-section">
+  <section class="section fade-in-section" id="poll-section">
     <h2 class="section-title">What style would you wear?</h2>
     <p style="font-size: 0.85rem; color: var(--text-mid); margin-bottom: 1.5rem;">We're starting with the dad hat. Help us decide what's next.</p>
     <div class="poll-grid">
@@ -523,7 +615,7 @@
   </section>
 
   <!-- FAQ -->
-  <section class="section">
+  <section class="section fade-in-section">
     <h2 class="section-title">Questions</h2>
     <div class="faq-list">
       <div class="faq-item" onclick="this.classList.toggle('open')">
@@ -550,7 +642,7 @@
   </section>
 
   <!-- Final CTA -->
-  <section class="final">
+  <section class="final fade-in-section">
     <h2 class="final-title">Lock in. Wear the cap.</h2>
     <p class="final-sub">Made to order. Ships in 5–7 days. Free UK delivery.</p>
     <a href="#" class="btn cta-link">Buy now — £28 →</a>
@@ -559,7 +651,7 @@
 
 <footer class="footer">
   <div class="wrap">
-    <p>© 2026 Single Until Series B · <a href="mailto:hello@singleuntilseriesb.com">hello@singleuntilseriesb.com</a> · <a href="#">Terms</a> · <a href="#">Privacy</a></p>
+    <p>© 2026 single until series b · <a href="mailto:hello@singleuntilseriesb.com">hello@singleuntilseriesb.com</a> · <a href="#">Terms</a> · <a href="#">Privacy</a></p>
   </div>
 </footer>
 
@@ -569,19 +661,87 @@
 </div>
 
 <script>
-  // Image gallery swap
+  // ══ Reduced motion check ══
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ══ Image gallery swap with crossfade ══
   function swapImg(thumb, src) {
-    document.getElementById('main-img').src = src;
+    const mainImg = document.getElementById('main-img');
+    if (mainImg.src.endsWith(src.replace(/^.*\//, ''))) return;
+
     document.querySelectorAll('.hero-thumb').forEach(t => t.classList.remove('active'));
     thumb.classList.add('active');
+
+    if (prefersReducedMotion) {
+      mainImg.src = src;
+      return;
+    }
+
+    mainImg.classList.add('swapping');
+    setTimeout(() => {
+      mainImg.src = src;
+      mainImg.classList.remove('swapping');
+    }, 200);
   }
 
-  // Mobile sticky bar
+  // ══ Mobile sticky bar ══
   const mob = document.getElementById('mob-bar');
   new IntersectionObserver(es => es.forEach(e => mob.classList.toggle('visible', !e.isIntersecting)))
     .observe(document.querySelector('.hero'));
 
-  // Poll — stores votes in localStorage, shows results after voting
+  // ══ Fade-in on scroll (IntersectionObserver) ══
+  if (!prefersReducedMotion) {
+    const fadeObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in-section').forEach(el => fadeObserver.observe(el));
+  } else {
+    document.querySelectorAll('.fade-in-section').forEach(el => el.classList.add('is-visible'));
+  }
+
+  // ══ CTA button pulse ══
+  if (!prefersReducedMotion) {
+    document.querySelectorAll('.hero-info .btn, .final .btn').forEach(btn => {
+      btn.classList.add('cta-pulse');
+    });
+  }
+
+  // ══ Parallax on lifestyle image ══
+  if (!prefersReducedMotion) {
+    const imgBreak = document.querySelector('.img-break');
+    const parallaxImg = imgBreak ? imgBreak.querySelector('img') : null;
+
+    if (parallaxImg) {
+      function updateParallax() {
+        const rect = imgBreak.getBoundingClientRect();
+        const windowH = window.innerHeight;
+        if (rect.bottom < 0 || rect.top > windowH) return;
+        const progress = (windowH - rect.top) / (windowH + rect.height);
+        const offset = (progress - 0.5) * 10;
+        parallaxImg.style.transform = 'translateY(' + offset + '%)';
+      }
+
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            updateParallax();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }, { passive: true });
+      updateParallax();
+    }
+  }
+
+  // ══ Poll — stores votes in localStorage, shows results after voting ══
   const POLL_KEY = 'susb_poll_vote';
   const styles = ['dad-hat', 'trucker', 'snapback', 'bucket'];
 
@@ -619,14 +779,21 @@
     showResults(getVotes());
   }
 
-  // Colour picker
+  // ══ Colour picker with bounce animation ══
   function pickColour(btn) {
     document.querySelectorAll('.colour-swatch').forEach(s => s.classList.remove('active'));
     btn.classList.add('active');
     document.getElementById('colour-name').textContent = btn.dataset.colour;
+
+    if (!prefersReducedMotion) {
+      btn.classList.remove('bounce');
+      void btn.offsetWidth; // force reflow to restart animation
+      btn.classList.add('bounce');
+      btn.addEventListener('animationend', () => btn.classList.remove('bounce'), { once: true });
+    }
   }
 
-  // All CTAs → Stripe
+  // ══ All CTAs → Stripe ══
   const STRIPE = '#'; // ← Replace with your Stripe Payment Link
   document.querySelectorAll('.cta-link').forEach(el => {
     el.addEventListener('click', e => {
