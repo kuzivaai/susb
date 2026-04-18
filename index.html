@@ -65,7 +65,7 @@
       padding: 0 var(--gutter);
     }
 
-    .nav-logo { font-size: 0.8rem; font-weight: 700; color: var(--text); text-decoration: none; letter-spacing: -0.01em; }
+    .nav-logo { color: var(--text); text-decoration: none; }
     .nav-right { display: flex; align-items: center; gap: 1rem; }
     .nav-btn {
       font-size: 0.7rem; font-weight: 600;
@@ -361,12 +361,6 @@
       .hero-thumbs { overflow-x: auto; }
       .details-grid { grid-template-columns: 1fr; gap: 1.5rem; }
       .section { padding: 2.5rem 0; }
-      .nav-logo-full { display: none; }
-      .nav-logo-short { display: inline; }
-    }
-
-    @media (min-width: 769px) {
-      .nav-logo-short { display: none; }
     }
 
     ::selection { background: var(--cta-bg); color: var(--cta-text); }
@@ -557,9 +551,9 @@
 
 <div class="scroll-progress" id="scroll-progress"></div>
 <nav class="nav">
-  <a href="#" class="nav-logo">
-    <span class="nav-logo-full">single until series b</span>
-    <span class="nav-logo-short">SUSB</span>
+  <a href="/" class="nav-logo" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+    <span class="nav-logo-icon" style="width:24px;height:24px;border:2px solid var(--text);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--text);line-height:1;flex-shrink:0;">↗</span>
+    <span class="nav-logo-text" style="font-size:0.65rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--text);">Trend Merch</span>
   </a>
   <div class="nav-right">
     <a href="https://buy.stripe.com/aFa8wQdjf1Rsg4Rdt5cQU00" class="nav-btn cta-link">Buy — £28</a>
@@ -605,6 +599,11 @@
       </div>
       <a href="https://buy.stripe.com/aFa8wQdjf1Rsg4Rdt5cQU00" class="btn cta-link">Buy now →</a>
       <p class="hero-under-cta">Made to order. Usually ships in 5–7 days.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:0.25rem;">
+        <span style="font-size:0.6rem;color:var(--text-light);display:flex;align-items:center;gap:0.3rem;">✓ Secure checkout</span>
+        <span style="font-size:0.6rem;color:var(--text-light);display:flex;align-items:center;gap:0.3rem;">✓ 14-day returns</span>
+        <span style="font-size:0.6rem;color:var(--text-light);display:flex;align-items:center;gap:0.3rem;">✓ UK embroidered</span>
+      </div>
       <div class="hero-specs">
         <div class="hero-spec"><div class="hero-spec-label">Delivery</div><div class="hero-spec-val">5–7 days</div></div>
         <div class="hero-spec"><div class="hero-spec-label">Fit</div><div class="hero-spec-val">Unisex</div></div>
@@ -638,6 +637,7 @@
           <div class="spec-row"><span class="spec-label">Fit</span><span class="spec-val">Unisex · one size</span></div>
           <div class="spec-row"><span class="spec-label">Made in</span><span class="spec-val">Embroidered in the UK</span></div>
         </div>
+        <p style="font-size:0.65rem;color:var(--text-light);margin-top:1rem;line-height:1.5;">Product images are digital mockups. Actual embroidery may vary slightly in colour and texture.</p>
       </div>
     </div>
   </section>
@@ -646,6 +646,14 @@
   <section class="section fade-in-section" style="text-align: center;">
     <h2 class="section-title">Five colours. One message.</h2>
     <img src="images/lineup.jpg" alt="single until series b caps in black, navy, green, burgundy, and beige" loading="lazy" style="border-radius: var(--radius); margin-top: 1rem;">
+  </section>
+
+  <!-- Why I made this -->
+  <section class="section fade-in-section" style="max-width:600px;margin:0 auto;">
+    <h2 class="section-title">Why I made this</h2>
+    <p style="font-size:0.9rem;color:var(--text-mid);line-height:1.7;margin-bottom:0.75rem;">Someone online said they pity anyone who stays single to focus on building. The replies went off.</p>
+    <p style="font-size:0.9rem;color:var(--text-mid);line-height:1.7;margin-bottom:0.75rem;">Founders, freelancers, makers — everyone who's ever gone all in on something recognised the feeling. So I put it on a cap.</p>
+    <p style="font-size:0.9rem;color:var(--text-mid);line-height:1.7;"><strong>Each one is individually embroidered by a UK partner. Not print-on-demand. Not mass-produced.</strong></p>
   </section>
 
   <!-- Style Poll -->
@@ -733,6 +741,10 @@
 
 <footer class="footer">
   <div class="wrap">
+    <div style="display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:0.75rem;">
+      <span style="width:20px;height:20px;border:1.5px solid var(--text-light);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:var(--text-light);line-height:1;">↗</span>
+      <span style="font-size:0.6rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);">Trend Merch</span>
+    </div>
     <p>© 2026 Trend Merch · <a href="mailto:info@trendmerch.co">info@trendmerch.co</a> · <a href="/terms.html">Terms</a> · <a href="/privacy.html">Privacy</a></p>
   </div>
 </footer>
@@ -888,6 +900,16 @@
       btn.addEventListener('animationend', () => btn.classList.remove('bounce'), { once: true });
     }
   }
+
+  // ══ FAQ keyboard accessibility ══
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        item.classList.toggle('open');
+      }
+    });
+  });
 
   // ══ All CTAs → Stripe ══
   // Replace with your Stripe Payment Link URL
