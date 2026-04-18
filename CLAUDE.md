@@ -79,7 +79,13 @@ Pre-order model with 100-unit threshold and 15 June 2026 deadline.
 - Git email must be mkuziva@gmail.com (not mkuziv — typo caused deploy blocks)
 
 ## What's NOT Done Yet
-- Stripe Payment Link not created (need one product: £28, one-off, tangible goods, tax inclusive)
+- Stripe Payment Link not created. Settings:
+    - Price: £28.00, one-off
+    - Tax: DO NOT enable Stripe Tax. Not VAT registered. No tax to collect.
+    - Tax behavior: Exclusive (no tax added)
+    - Product tax code: General - Tangible Goods
+    - Shipping: UK = £0.00 (free), International = £8.00
+    - Collect shipping address: YES
 - Custom domain not connected (singleuntilseriesb.com)
 - No real product samples ordered (only AI mockups so far)
 - X/IG accounts created but no content posted
