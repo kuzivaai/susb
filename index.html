@@ -898,7 +898,7 @@
   // When you create the Payment Link, add a DROPDOWN custom field labelled "Cap Colour"
   // with options: Black, Navy Blue, Stone, Burgundy, Vintage Green
   // Stripe will show this dropdown at checkout so the customer confirms their colour choice
-  const STRIPE = '#';
+  const STRIPE = 'https://buy.stripe.com/aFa8wQdjf1Rsg4Rdt5cQU00';
   document.querySelectorAll('.cta-link').forEach(el => {
     el.addEventListener('click', e => {
       if (STRIPE !== '#') { e.preventDefault(); location.href = STRIPE; }
