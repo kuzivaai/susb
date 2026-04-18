@@ -8,9 +8,9 @@
 
 Someone said they pity anyone who stays single to build their company.
 
-So I embroidered "Single Until Series B" on a cap.
+So I embroidered "single until / series b" on a cap.
 
-200 being made. Here's why.
+Here's why.
 
 ---
 

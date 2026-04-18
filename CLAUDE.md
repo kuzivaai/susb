@@ -27,15 +27,24 @@ Pre-order model with 100-unit threshold and 15 June 2026 deadline.
 - £12.00 per cap + £3.00 UK delivery = £15.00 total per order
 - 15 cap colours available (see images/cap-colours.jpg)
 - 17 thread colours available (see images/thread-colours.jpg)
-- Font options: Nineties Font (included), Retro Font, Figtree, Bold Italic, Classic, Modern, College, Cute — premium fonts cost £15 extra from supplier (DO NOT offer premium fonts unless pricing is resolved)
+- Font: Nineties Font (included, no extra cost) — clean sans-serif, selected for embroidery legibility
+- Other fonts available (Retro, Figtree, Bold Italic, Classic, Modern, College, Cute) at £15 extra from supplier — DO NOT offer premium fonts unless pricing is resolved
 - Caps: 100% washed cotton twill, unstructured 6-panel, brass buckle closure
 - Estimated delivery: ~5 days from order (per Etsy listing: "Get it by 22 Apr" from 17 Apr)
+- When ordering from supplier, specify: TWO lines ("single until" / "series b"), lowercase, Nineties Font
 
 ## Product Details
 - Unisex, one size adjustable
 - Embroidered in the UK
 - Limited run (number TBC based on orders)
-- Text: "Single Until Series B"
+- Text on cap: two lines, lowercase, Nineties Font:
+    Line 1: "single until"
+    Line 2: "series b"
+- Decision confirmed 2026-04-18 after research-eval verification:
+    - Two lines: supported by embroidery legibility data (21 chars tight on 3.5-4" dad hat panel)
+    - Lowercase: user's choice (data doesn't resolve case for slogans — brand decision)
+    - Sans-serif: supported by embroidery best practice
+- DO NOT change the text layout without user approval.
 
 ## Tech Stack
 - Plain HTML/CSS/JS (no framework)
