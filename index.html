@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>single until series b — Embroidered Cap · £28</title>
-  <meta name="description" content="single until series b. Embroidered dad hat. Washed cotton twill, flat embroidery, brass buckle. Unisex. Made in the UK. £28 all-in. Buy now.">
+  <title>single until series b — Embroidered Cap · £35</title>
+  <meta name="description" content="single until series b. Embroidered dad hat. Washed cotton twill, flat embroidery, brass buckle. Unisex. Made in the UK. £35 all-in. Buy now.">
   <meta name="keywords" content="single until series b, founder cap, startup hat, embroidered dad hat, startup merch, unisex cap, limited edition">
-  <meta property="og:title" content="single until series b — Embroidered Cap · £28">
-  <meta property="og:description" content="single until series b. Embroidered dad hat. Unisex. Made in the UK. £28 all-in. Buy now.">
+  <meta property="og:title" content="single until series b — Embroidered Cap · £35">
+  <meta property="og:description" content="single until series b. Embroidered dad hat. Unisex. Made in the UK. £35 all-in. Buy now.">
   <meta property="og:type" content="product">
   <meta property="og:image" content="https://singleuntilseriesb.com/images/flatlay.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="single until series b">
-  <meta name="twitter:description" content="Embroidered dad hat. Unisex. Made in the UK. £28 all-in. Buy now.">
+  <meta name="twitter:description" content="Embroidered dad hat. Unisex. Made in the UK. £35 all-in. Buy now.">
   <meta name="twitter:image" content="https://singleuntilseriesb.com/images/flatlay.jpg">
   <link rel="canonical" href="https://singleuntilseriesb.com">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Product","name":"single until series b cap","description":"single until series b. Embroidered dad hat. Washed cotton twill, flat embroidery, brass buckle. Unisex. Made in the UK. £28 all-in.","image":"https://singleuntilseriesb.com/images/hero.jpg","brand":{"@type":"Brand","name":"single until series b"},"offers":{"@type":"Offer","price":"28.00","priceCurrency":"GBP","availability":"https://schema.org/InStock","url":"https://singleuntilseriesb.com","priceValidUntil":"2026-06-15"},"material":"100% washed cotton twill","audience":{"@type":"PeopleAudience","suggestedGender":"unisex"}}
+  {"@context":"https://schema.org","@type":"Product","name":"single until series b cap","description":"single until series b. Embroidered dad hat. Washed cotton twill, flat embroidery, brass buckle. Unisex. Made in the UK. £35 all-in.","image":"https://singleuntilseriesb.com/images/hero.jpg","brand":{"@type":"Brand","name":"single until series b"},"offers":{"@type":"Offer","price":"35.00","priceCurrency":"GBP","availability":"https://schema.org/InStock","url":"https://singleuntilseriesb.com","priceValidUntil":"2026-06-15"},"material":"100% washed cotton twill","audience":{"@type":"PeopleAudience","suggestedGender":"unisex"}}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -575,7 +575,7 @@
     <span class="nav-logo-short">SUSB</span>
   </a>
   <div class="nav-right">
-    <a href="#" class="nav-btn cta-link">Buy — £28</a>
+    <a href="#" class="nav-btn cta-link">Buy — £35</a>
   </div>
 </nav>
 
@@ -613,7 +613,7 @@
       </div>
 
       <div class="hero-price-row">
-        <span class="hero-price">£28</span>
+        <span class="hero-price">£35</span>
         <span class="hero-price-note">all-in · free UK shipping</span>
       </div>
       <a href="#" class="btn cta-link">Buy now →</a>
@@ -734,7 +734,7 @@
   <section class="final fade-in-section">
     <h2 class="final-title">Lock in. Wear the cap.</h2>
     <p class="final-sub">Made to order. Ships in 5–7 days. Free UK delivery.</p>
-    <a href="#" class="btn cta-link">Buy now — £28 →</a>
+    <a href="#" class="btn cta-link">Buy now — £35 →</a>
   </section>
 </div>
 
@@ -745,7 +745,7 @@
 </footer>
 
 <div class="mob-bar" id="mob-bar">
-  <div><div class="mob-bar-info">£28 all-in</div><div class="mob-bar-sub">Free UK shipping · 5–7 days</div></div>
+  <div><div class="mob-bar-info">£35 all-in</div><div class="mob-bar-sub">Free UK shipping · 5–7 days</div></div>
   <a href="#" class="mob-bar-btn cta-link">Buy now →</a>
 </div>
 
@@ -894,7 +894,11 @@
   }
 
   // ══ All CTAs → Stripe ══
-  const STRIPE = '#'; // ← Replace with your Stripe Payment Link
+  // Replace with your Stripe Payment Link URL
+  // When you create the Payment Link, add a DROPDOWN custom field labelled "Cap Colour"
+  // with options: Black, Navy Blue, Stone, Burgundy, Vintage Green
+  // Stripe will show this dropdown at checkout so the customer confirms their colour choice
+  const STRIPE = '#';
   document.querySelectorAll('.cta-link').forEach(el => {
     el.addEventListener('click', e => {
       if (STRIPE !== '#') { e.preventDefault(); location.href = STRIPE; }

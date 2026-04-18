@@ -10,16 +10,23 @@ Pre-order model with 100-unit threshold and 15 June 2026 deadline.
 - **NOT holding stock.** Each cap is ordered individually from the Etsy seller on purchase.
 
 ## Pricing — VERIFIED, DO NOT CHANGE WITHOUT USER APPROVAL
-- **Retail price: £28** (user confirmed 2026-04-18)
+- **Retail price: £35** (user confirmed 2026-04-18, updated for 55% margin target)
 - **UK cost: £15.00** (£12.00 cap + £3.00 UK shipping from KidsCultureDesign on Etsy)
 - **US cost: £24.00** (£16.00 cap + £8.00 intl shipping from same seller)
-- **Stripe UK fee: £0.62** (1.5% + 20p on £28)
-- **Stripe intl fee: ~£1.11-1.50** (3.25% + 20p, varies with total)
-- **UK profit: £12.38 per sale (44.2% margin)**
-- **US profit if charging £8 shipping: £10.63 per sale (29.5% margin)**
-- UK shipping included in £28. International shipping charged separately at checkout.
-- Target margin was 45%. User accepted 44.2% UK margin as competitive.
+- **Stripe UK fee: £0.73** (1.5% + 20p on £35)
+- **Stripe intl fee: ~£1.34-1.47** (3.25% + 20p, varies with total)
+- **UK profit: £19.27 per sale (55.1% margin)** ✓
+- **US profit: £21.53 per sale on £39 product (55.2% margin)** ✓
+- UK shipping included in £35. International shipping £8 charged separately at checkout.
+- Target margin: 55%. Achieved.
 - Do NOT change the price. Present data and ask if margin analysis is needed.
+
+## Tax Position (verified 2026-04-18)
+- NOT VAT registered (under £90k threshold). Do not charge VAT.
+- No US sales tax nexus. Do not collect US sales tax.
+- Do NOT enable Stripe Tax.
+- International customers may face import duties at delivery — disclosed in FAQ.
+- Price is £35, no tax component. It's just £35.
 
 ## Supplier
 - **KidsCultureDesign** on Etsy (4.9 stars, 4.2k reviews)
@@ -80,7 +87,7 @@ Pre-order model with 100-unit threshold and 15 June 2026 deadline.
 
 ## What's NOT Done Yet
 - Stripe Payment Link not created. Settings:
-    - Price: £28.00, one-off
+    - Price: £35.00, one-off
     - Tax: DO NOT enable Stripe Tax. Not VAT registered. No tax to collect.
     - Tax behavior: Exclusive (no tax added)
     - Product tax code: General - Tangible Goods
