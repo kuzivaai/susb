@@ -93,7 +93,9 @@ Pre-order model with 100-unit threshold and 15 June 2026 deadline.
     - Product tax code: General - Tangible Goods
     - Shipping: UK = £0.00 (free), International = £8.00
     - Collect shipping address: YES
-- Custom domain not connected (singleuntilseriesb.com)
+- Custom domain not connected — user wants a GENERIC domain (not singleuntilseriesb.com)
+  because this site will host multiple trend merch products, not just this cap.
+  The domain should work for future trend drops too.
 - No real product samples ordered (only AI mockups so far)
 - X/IG accounts created but no content posted
 - T-shirt expansion discussed but PARKED until cap validates (do not build until 20+ caps sold)
