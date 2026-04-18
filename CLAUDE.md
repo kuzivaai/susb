@@ -10,15 +10,15 @@ Pre-order model with 100-unit threshold and 15 June 2026 deadline.
 - **NOT holding stock.** Each cap is ordered individually from the Etsy seller on purchase.
 
 ## Pricing — VERIFIED, DO NOT CHANGE WITHOUT USER APPROVAL
-- **Retail price: £35** (user confirmed 2026-04-18, updated for 55% margin target)
+- **Retail price: £28** (user confirmed 2026-04-18, 44.2% margin accepted)
 - **UK cost: £15.00** (£12.00 cap + £3.00 UK shipping from KidsCultureDesign on Etsy)
 - **US cost: £24.00** (£16.00 cap + £8.00 intl shipping from same seller)
-- **Stripe UK fee: £0.73** (1.5% + 20p on £35)
-- **Stripe intl fee: ~£1.34-1.47** (3.25% + 20p, varies with total)
-- **UK profit: £19.27 per sale (55.1% margin)** ✓
-- **US profit: £21.53 per sale on £39 product (55.2% margin)** ✓
-- UK shipping included in £35. International shipping £8 charged separately at checkout.
-- Target margin: 55%. Achieved.
+- **Stripe UK fee: £0.62** (1.5% + 20p on £28)
+- **Stripe intl fee: ~£1.11** (3.25% + 20p on £28)
+- **UK profit: £12.38 per sale (44.2% margin)**
+- **US profit: £2.89 on product alone (shipping passed through)**
+- UK shipping included in £28. International shipping £8 charged separately at checkout.
+- Target margin: 45%. UK margin is 44.2% — accepted by user.
 - Do NOT change the price. Present data and ask if margin analysis is needed.
 
 ## Tax Position (verified 2026-04-18)
@@ -87,7 +87,7 @@ Pre-order model with 100-unit threshold and 15 June 2026 deadline.
 
 ## What's NOT Done Yet
 - Stripe Payment Link not created. Settings:
-    - Price: £35.00, one-off
+    - Price: £28.00, one-off
     - Tax: DO NOT enable Stripe Tax. Not VAT registered. No tax to collect.
     - Tax behavior: Exclusive (no tax added)
     - Product tax code: General - Tangible Goods
