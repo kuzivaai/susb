@@ -847,8 +847,8 @@
 
   function getVotes() {
     try {
-      return JSON.parse(localStorage.getItem('susb_poll_results')) || { 'dad-hat': 12, 'trucker': 8, 'snapback': 5, 'bucket': 3 };
-    } catch { return { 'dad-hat': 12, 'trucker': 8, 'snapback': 5, 'bucket': 3 }; }
+      return JSON.parse(localStorage.getItem('susb_poll_results')) || { 'dad-hat': 0, 'trucker': 0, 'snapback': 0, 'bucket': 0 };
+    } catch { return { 'dad-hat': 0, 'trucker': 0, 'snapback': 0, 'bucket': 0 }; }
   }
 
   function showResults(votes) {
