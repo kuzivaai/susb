@@ -1,9 +1,10 @@
-# SUSB — Session Handover
+# trendmerch.co — Session Handover
 
 **Date:** 2026-04-18
-**Project:** single until series b (susb)
+**Project:** trendmerch.co (first product: single until series b cap)
 **Repo:** github.com/kuzivaai/susb
-**Live:** susb.vercel.app
+**Live:** trendmerch.co (also susb.vercel.app)
+**Email:** info@trendmerch.co (GoDaddy Titan, forwarding to Gmail TBD)
 
 ---
 

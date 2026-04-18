@@ -1,8 +1,30 @@
-# SUSB — Single Until Series B
+# trendmerch.co — Trend Merch Platform
 
 ## Project Overview
-Landing page and ecommerce setup for "Single Until Series B" embroidered dad caps.
-Pre-order model with 100-unit threshold and 15 June 2026 deadline.
+Trend merch dropshipping platform. First product: "single until series b" embroidered dad caps.
+Future products: any trending phrase/meme on apparel and accessories.
+Domain: trendmerch.co
+Email: info@trendmerch.co
+
+## Critical Rules — READ THESE FIRST
+
+1. **NEVER say "go sell", "go launch", "go post", or pressure the user to launch.** Every time this happened, the user found real problems that were live on the site. Be thorough. Let the user decide when they're ready.
+
+2. **NEVER claim work is "done" or "ready" without checking.** Before claiming anything is complete:
+   - Screenshot the live site on desktop AND mobile
+   - Read every visible text element
+   - Check every link works
+   - Check for mock data, placeholder content, supplier references
+   - Check animations don't hide content
+   - Ask: "what would a customer think if they saw this?"
+
+3. **NEVER change price, business model, text layout, or product scope without asking.** Present data, let user decide.
+
+4. **NEVER dismiss issues as "minor" or "not a launch blocker."** If it's on the site, it matters. Fix it properly.
+
+5. **NEVER make unverified claims in copy.** No "well-made" without a sample. No specific ship dates without supplier confirmation. No "US partner" without one set up.
+
+6. **Be patient.** Quality over speed. A polished site in 2 days beats a broken site today.
 
 ## Business Model
 - **Direct purchase / dropshipping**: Customer buys → we order from Etsy seller → seller ships direct to customer.
