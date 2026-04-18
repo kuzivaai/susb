@@ -45,7 +45,7 @@ Trend merch dropshipping platform. First product is an embroidered dad cap with 
 4. **No real product sample ordered** — only AI mockup images. No physical cap verified.
 5. **No social media content posted** — IG and X accounts exist but are empty.
 6. **No order placed yet** — checkout flow tested but no real purchase made.
-7. **Old Etsy supplier images still in images/ folder** — cap-colours.jpg, thread-colours.jpg, cap-hero.jpg, cap-group.jpg, cap-back.jpg are no longer used on the site but still in the repo. Can be deleted.
+7. ~~Old Etsy supplier images~~ — **DONE** (deleted cap-colours.jpg, thread-colours.jpg, cap-hero.jpg, cap-group.jpg, cap-back.jpg).
 
 ## Known Issues / Tech Debt
 
@@ -114,18 +114,29 @@ Supplier discount code: COMEBACK (5% off at KidsCultureDesign) — use on every 
 - `images/detail.jpg` — navy embroidery close-up (168KB)
 - `images/lifestyle.jpg` — woman wearing cap in coworking space (136KB)
 - `images/lineup.jpg` — 5 colour lineup (82KB)
-- `images/cap-colours.jpg` — UNUSED, can delete (supplier image)
-- `images/thread-colours.jpg` — UNUSED, can delete (supplier image)
-- `images/cap-hero.jpg` — UNUSED, can delete (old mockup)
-- `images/cap-group.jpg` — UNUSED, can delete (old mockup)
-- `images/cap-back.jpg` — UNUSED, can delete (old mockup)
+
+## Completed This Session (2026-04-18 evening)
+
+1. DNS verified — trendmerch.co resolves to 76.76.21.21 (Vercel) ✓
+2. Email forwarding Titan → Gmail — done by user ✓
+3. formsubmit.co confirmed — done by user ✓
+4. Unused images cleaned up (5 files deleted, ~892KB saved) ✓
+5. Full fresh-eyes site review — no customer-facing issues ✓
+6. Comprehensive audit (36 issues found, 25 fixed) — see docs/AUDIT_REPORT.md ✓
+7. Research-eval passed (4/5 overall, no blocking issues) ✓
+8. x-thread-copy.md completely rewritten (was contradicting business model) ✓
+9. Privacy policy updated with UK GDPR lawful basis ✓
+10. Accessibility improvements: keyboard nav, WCAG AA contrast, aria labels ✓
+11. SEO keywords broadened for discoverability ✓
+12. All meta tags fixed ("Made in UK" → "Embroidered in UK") ✓
+13. Footer updated to Trend Merch copyright across all pages ✓
+14. CLAUDE.md updated with umbrella brand strategy and current state ✓
 
 ## Next Session Priorities
 
-1. Verify trendmerch.co DNS has propagated and site loads on custom domain
-2. Set up email forwarding from Titan to Gmail
-3. Confirm formsubmit.co email capture is working (submit test, click confirmation)
-4. Clean up unused images from repo
-5. Review the full site one more time with fresh eyes before any promotion
-6. Consider ordering an actual sample cap from the Etsy seller to verify quality
-7. When user is satisfied: post X thread and IG content from x-thread-copy.md
+1. Order a sample cap from KidsCultureDesign to verify quality
+3. Consider replacing formsubmit.co with Web3Forms (better reliability, hides email)
+4. Add social proof — founder "why I made this" section or early customer photos
+5. Compress images (detail.jpg 173KB → ~60KB target)
+6. When user is ready: post X thread and IG content from x-thread-copy.md
+7. Research next trend drop for Trend Merch umbrella

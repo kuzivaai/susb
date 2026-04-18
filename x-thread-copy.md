@@ -26,19 +26,19 @@ Freedom. Craft. Impact. Escape. Whatever your reason — you know the feeling.
 
 ## Tweet 3 [ATTACH SECOND IMAGE]
 
-Washed cotton twill. Flat embroidery. Brass buckle. Unstructured six-panel.
+Washed cotton twill. Flat embroidery. Brass-effect buckle. Unstructured six-panel.
 
-Embroidered in the UK. Unisex. £28 all-in. 200 total, no restock.
+Embroidered in the UK. Unisex. £28 all-in. Free UK shipping.
 
-Not a Printful generic. A proper cap.
+Not print-on-demand. Each one embroidered individually.
 
 ---
 
 ## Tweet 4
 
-[YOUR_URL]
+https://trendmerch.co
 
-0/200 reserved. If we don't hit 100 by 15 June, Stripe auto-refunds every order. No forms, no emails.
+Made to order. Ships in 5–7 days. Pick your colour at checkout.
 
 ---
 
@@ -64,12 +64,14 @@ my DMs say unread
 **Hook B (poll):**
 Honest question: would you wear a "Single Until Series B" cap to a pitch meeting?
 
-🟢 Obviously
-🔴 Never
-🟡 Already did
+Yes
+Never
+Already did
 
-**Hook C (controversial — earns replies):**
-The people most offended by "Single Until Series B" have never built anything that required real sacrifice. And that's fine. The cap isn't for them.
+**Hook C (engagement driver):**
+"Single Until Series B" — serious or satire?
+
+That's the point. It's both.
 
 **Hook D (reply-guy strategy):**
 [no text, just the mockup image — post as reply to any viral founder/hustle/dating tweet]
@@ -84,7 +86,7 @@ Single Until Series B.
 
 Not a joke. A decision.
 
-200 caps. Embroidered in the UK. Unisex. £28. No restock.
+Embroidered in the UK. Unisex. £28. Free UK shipping.
 
 For founders, builders, makers, freelancers — anyone who chose to lock in.
 
@@ -103,7 +105,7 @@ Slide 4: [mockup] "Whatever your reason — this cap is yours. Link in bio."
 
 ## Post 3 — Reel (talking head, 20 seconds, cut straight in)
 
-"—so someone says they pity anyone who stays single to focus on building. And yeah, I get it, balance matters. But everyone who's built something real had a season where they went all in. This cap is for that season. 200 made, link in bio."
+"—so someone says they pity anyone who stays single to focus on building. And yeah, I get it, balance matters. But everyone who's built something real had a season where they went all in. This cap is for that season. Link in bio."
 
 [HARD CUT]
 
@@ -119,7 +121,7 @@ Slide 4: [mockup] "Whatever your reason — this cap is yours. Link in bio."
 1. Why the phrase resonated (2 min)
 2. The backlash — and why it actually helps (3 min)
 3. Who this is really for (not just tech bros) (5 min)
-4. The cap, the run, the kill switch (3 min)
+4. The product — materials, quality, why not print-on-demand (3 min)
 5. Open Q&A (17 min)
 
 **Promote 2 hours before:** "Going live to talk about locking in, building, and why I put a meme on a cap. Bring opinions."
@@ -128,10 +130,10 @@ Slide 4: [mockup] "Whatever your reason — this cap is yours. Link in bio."
 
 # Community Seeding
 
-- [ ] **Indie Hackers** — "Testing whether a polarising phrase can sell 200 caps with no audience and no ads"
-- [ ] **r/SideProject** — frame as: pre-order validation experiment with a kill switch
+- [ ] **Indie Hackers** — "I turned a meme into a product. Here's the economics behind selling embroidered caps with no audience and no ads"
+- [ ] **r/SideProject** — frame as: solo merch experiment, real margins, no VC
 - [ ] **Product Hunt** — Tuesday launch. Frame: "A cap for anyone who chose to lock in"
-- [ ] **Show HN** — "Show HN: Validating physical product demand with Stripe pre-orders and a live counter"
+- [ ] **Show HN** — "Show HN: I'm selling embroidered caps from a single-page site with Stripe Payment Links"
 
 **Skip:** r/Entrepreneur, r/Startups, LinkedIn
 
@@ -143,15 +145,15 @@ Slide 4: [mockup] "Whatever your reason — this cap is yours. Link in bio."
 
 Hi [name],
 
-"Single Until Series B" went viral in March 2026. Then an influencer said they pity anyone who stays single to focus on building. The comment sections exploded.
+"Single Until Series B" started as a phrase that resonated with founders, freelancers, and builders online — the idea that some people choose to go all in on what they're building, relationships included.
 
-I made it into a cap. £28, embroidered in the UK, unisex, 200-unit limited run with a public kill switch: 100 Stripe pre-orders by 15 June or every order auto-refunds.
+I turned it into a cap. £28, embroidered in the UK, unisex, made to order. No VC, no warehouse, no print-on-demand — each one is individually embroidered by a UK partner and shipped direct.
 
 It's not gendered, it's not just for tech — it's for anyone in a season of going all in on something. Founders, freelancers, makers, side-project builders.
 
-Landing page: [URL]
+Landing page: https://trendmerch.co
 
-Happy to share pre-order numbers or discuss the cultural angle.
+Happy to share sales numbers or discuss the cultural angle.
 
 [your name]
 

@@ -1,10 +1,13 @@
 # trendmerch.co — Trend Merch Platform
 
 ## Project Overview
-Trend merch dropshipping platform. First product: "single until series b" embroidered dad caps.
-Future products: any trending phrase/meme on apparel and accessories.
+Trend Merch — umbrella brand for trending topics on apparel and accessories.
+Model: research what's trending (last 20-30 days) → put it on caps/t-shirts → sell quickly while trend is hot.
+First product: "single until series b" embroidered dad caps.
 Domain: trendmerch.co
 Email: info@trendmerch.co
+Margin target: 45-65% (never below 45%)
+Revenue target: minimum £300 profit/month
 
 ## Critical Rules — READ THESE FIRST
 
@@ -48,14 +51,14 @@ Email: info@trendmerch.co
 - No US sales tax nexus. Do not collect US sales tax.
 - Do NOT enable Stripe Tax.
 - International customers may face import duties at delivery — disclosed in FAQ.
-- Price is £35, no tax component. It's just £35.
+- Price is £28, no tax component. It's just £28.
 
 ## Supplier
 - **KidsCultureDesign** on Etsy (4.9 stars, 4.2k reviews)
 - UK-based, ships direct to customer
 - £12.00 per cap + £3.00 UK delivery = £15.00 total per order
-- 15 cap colours available (see images/cap-colours.jpg)
-- 17 thread colours available (see images/thread-colours.jpg)
+- 15 cap colours available
+- 17 thread colours available
 - Font: Nineties Font (included, no extra cost) — clean sans-serif, selected for embroidery legibility
 - Other fonts available (Retro, Figtree, Bold Italic, Classic, Modern, College, Cute) at £15 extra from supplier — DO NOT offer premium fonts unless pricing is resolved
 - Caps: 100% washed cotton twill, unstructured 6-panel, brass buckle closure
@@ -65,7 +68,7 @@ Email: info@trendmerch.co
 ## Product Details
 - Unisex, one size adjustable
 - Embroidered in the UK
-- Limited run (number TBC based on orders)
+- Made to order (no stock, no limits)
 - Text on cap: two lines, lowercase, Nineties Font:
     Line 1: "single until"
     Line 2: "series b"
@@ -77,10 +80,10 @@ Email: info@trendmerch.co
 
 ## Tech Stack
 - Plain HTML/CSS/JS (no framework)
-- Hosted on Vercel (susb.vercel.app)
+- Hosted on Vercel (trendmerch.co, also susb.vercel.app)
 - Repo: github.com/kuzivaai/susb
 - Payments: Stripe Payment Links
-- Domain: singleuntilseriesb.com (not yet connected)
+- Domain: trendmerch.co (connected, live)
 
 ## Critical Rules
 1. **NEVER change the price without asking.** Present margin analysis, let user decide.
@@ -92,15 +95,19 @@ Email: info@trendmerch.co
 
 ## Files
 - `index.html` — Landing page (single file, all CSS/JS inline)
+- `terms.html` — Terms & Conditions (UK Consumer Contracts Regs compliant)
+- `privacy.html` — Privacy Policy (UK GDPR compliant, lawful basis stated)
 - `x-thread-copy.md` — X launch thread, IG captions, PR pitch, community seeding
+- `docs/HANDOVER.md` — Session handover document
+- `docs/PRICING.md` — Verified margin calculations
+- `docs/OPERATIONS.md` — Order fulfilment process
+- `docs/AUDIT_REPORT.md` — Comprehensive audit findings and research-eval results
 - `images/` — Product photos (AI-generated via Gemini Nano Banana Pro, watermarks removed)
   - hero.jpg — Beige cap, hand-held front view
   - flatlay.jpg — Black cap on desk with laptop + coffee
   - detail.jpg — Navy cap embroidery close-up
   - lifestyle.jpg — Person wearing cap in coworking space
   - lineup.jpg — 5 colour lineup
-  - cap-colours.jpg — Full 15-colour chart from supplier
-  - thread-colours.jpg — 17 thread colour options from supplier
 
 ## Deployment
 - `vercel --prod --yes` to deploy
@@ -108,18 +115,27 @@ Email: info@trendmerch.co
 - Git email must be mkuziva@gmail.com (not mkuziv — typo caused deploy blocks)
 
 ## What's NOT Done Yet
-- Stripe Payment Link not created. Settings:
-    - Price: £28.00, one-off
-    - Tax: DO NOT enable Stripe Tax. Not VAT registered. No tax to collect.
-    - Tax behavior: Exclusive (no tax added)
-    - Product tax code: General - Tangible Goods
-    - Shipping: UK = £0.00 (free), International = £8.00
-    - Collect shipping address: YES
-- Custom domain not connected — user wants a GENERIC domain (not singleuntilseriesb.com)
-  because this site will host multiple trend merch products, not just this cap.
-  The domain should work for future trend drops too.
 - No real product samples ordered (only AI mockups so far)
 - X/IG accounts created but no content posted
 - T-shirt expansion discussed but PARKED until cap validates (do not build until 20+ caps sold)
-- International shipping pricing not finalised (Etsy seller charges more for intl — need to check exact rates)
-- Colour selection on Stripe: currently landing page shows 5 colours but Stripe Payment Link doesn't capture colour choice — need to add a note field or create separate links per colour
+
+## What's Done
+- Stripe Payment Link live (£28, colour dropdown, UK free + intl £8 shipping)
+- Domain trendmerch.co connected and live (DNS verified)
+- Terms & Privacy pages live (UK Consumer Contracts Regs, UK GDPR compliant)
+- Email capture via formsubmit.co (confirmed)
+- Email forwarding: Titan → Gmail (set up by user)
+- All 5 product images (AI-generated, no watermarks)
+- X thread + IG captions + PR pitch written (x-thread-copy.md)
+- Full audit completed 2026-04-18 (see docs/AUDIT_REPORT.md)
+- Accessibility improvements: keyboard nav, WCAG AA contrast, aria labels
+- SEO: JSON-LD, OG/Twitter cards, broadened keywords
+- Unused supplier images cleaned up (5 files deleted)
+
+## Known Risks (from audit)
+- **formsubmit.co** has poor reliability (2.9 Trustpilot). Consider switching to Web3Forms.
+- **No social proof** — zero reviews or testimonials. Biggest conversion risk.
+- **Supplier costs** — UK £15/order, International £24/order. Confirmed by user with supplier. Do not re-question.
+- **Images not optimised** — detail.jpg 173KB, could be ~60KB compressed.
+- **Poll is client-side only** — localStorage votes, not real aggregate data.
+- **priceValidUntil** in JSON-LD expires 2026-06-15 — update before then.
